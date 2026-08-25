@@ -20,11 +20,6 @@ I specialize in building production AI systems, agentic workflows, RAG pipelines
 
 ### 💼 Featured Engineering Projects
 
-#### 🤖 [Enterprise AI Workflow Assistant](https://github.com/Ham144/enterprise-ai-workflow-assistant) *(In Development)*
-*   **What it is:** A multi-agent workflow automation system for marketing, partner research, and customer service.
-*   **Core Tech:** Python, FastAPI, LangGraph, NestJS, Pgvector, Docker, Langfuse.
-*   **Highlights:** Focuses on LLMOps & Observability via Langfuse to trace agent execution paths, RAG pipelines with PostgreSQL/Pgvector, and async FastAPI microservices.
-
 #### 🔄 [Approval Workflow Engine AI](https://github.com/Ham144/approval-workflow-engine-ai)
 *   **What it is:** A dynamic multi-tenant approval system with a visual drag-and-drop workflow designer.
 *   **Core Tech:** React Flow V11, React, Node.js, Active Directory (LDAP), Telegram Bot alerts, SMTP.
@@ -35,6 +30,11 @@ I specialize in building production AI systems, agentic workflows, RAG pipelines
 *   **Core Tech:** NestJS, PostgreSQL, Redis, TypeScript, Next.js.
 *   **Highlights:** Resolves scheduling collisions automatically via a dock allocation algorithm, leveraging Redis cache locks and real-time drag-and-drop queues.
 
+#### 🗺️ [Field Sales CRM (S-BIT)](https://github.com/Ham144/field-sales-crm-sbit)
+*   **What it is:** A location-verified sales routing and client order-taking CRM.
+*   **Core Tech:** React, Express.js, Leaflet Maps (GPS Auditing), Microsoft Dynamics NAV ERP integration (SOAP/NTLM).
+*   **Highlights:** Eliminates fake check-ins by recording GPS coordinates during visits, and automates order pushing directly to ERP using SOAP/NTLM web services.
+
 #### 📱 [Super POS Mobile](https://github.com/Ham144/super-pos-mobile)
 *   **What it is:** An offline-first mobile Point of Sale app for sales reps and retail outlets.
 *   **Core Tech:** React Native, Expo 52, NativeWind, TCP Sockets, Midtrans Payment Gateway.
@@ -43,10 +43,12 @@ I specialize in building production AI systems, agentic workflows, RAG pipelines
 #### 📦 [Inventory Audit System](https://github.com/Ham144/inventory-audit-system)
 *   **What it is:** A physical stock auditing and recount delegation dashboard.
 *   **Core Tech:** React Router v7 (Remix framework), Tailwind CSS v4, Node.js, Express, MongoDB.
+*   **Highlights:** Streamlines physical stock verification processes, allowing audit managers to capture discrepancies and delegate recount tasks to specific staff in real-time.
 
 #### 💰 [Petty Cash Manager](https://github.com/Ham144/petty-cash-manager)
 *   **What it is:** Corporate expense tracking and petty cash logging system.
 *   **Core Tech:** Next.js 15, NestJS v10, NextAuth, Recharts, Cloudflare R2/S3 receipt uploads.
+*   **Highlights:** Enforces financial compliance by monitoring department limits, visualizing budget burn rates, and maintaining audit trails of official digital receipts.
 
 ---
 
