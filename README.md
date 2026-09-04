@@ -71,12 +71,41 @@ Replaces hardcoded business approval paths with a visual graph editor. Administr
 * **Digital Signatures & Audit Trail:** Every approval step is cryptographically signed and logged for compliance.
 
 ```mermaid
-graph TD
-    User[React Flow V11 Frontend] -->|Visual Graph Specs| API[Node.js Workflow Gateway]
-    API -->|LDAP Protocol| AD[Active Directory]
-    API -->|Condition Evaluator| Engine[Approval Decision Engine]
-    Engine -->|Webhooks| Telegram[Telegram Bot Alerts]
-    Engine -->|SMTP| Mail[Email Notifications]
+graph TB
+    subgraph Client_Layer["Frontend Studio (React 18 + Vite)"]
+        UI["React Flow V11 Graph Editor"]
+        Props["Node Property & Condition Panel"]
+        ROI["ROI & Legal Modal Components"]
+    end
+
+    subgraph Auth_Gateway["Gateway & Corporate Security"]
+        Gateway["Express API Gateway"]
+        AD["Active Directory (LDAP SSO)"]
+        JWT["JWT & Role Authorization"]
+    end
+
+    subgraph Engine_Core["Workflow Execution Core"]
+        DAG["DAG Graph State Resolver"]
+        Evaluator["Dynamic Condition Evaluator"]
+        Tenant["Multi-Tenant Scope Engine"]
+    end
+
+    subgraph Dispatch_Bus["Notification & Dispatch Engine"]
+        Telegram["Telegram Bot Webhooks"]
+        Mailer["SMTP Email Dispatcher"]
+        Audit["SHA-256 Signature Log DB"]
+    end
+
+    UI -->|Visual Graph Schema| Gateway
+    Props -->|Node Rules| Gateway
+    Gateway -->|Auth Request| AD
+    AD -->|LDAP Token| JWT
+    JWT --> DAG
+    DAG --> Evaluator
+    Evaluator --> Tenant
+    Tenant -->|Stage Transition| Telegram
+    Tenant -->|Approval Email| Mailer
+    Tenant -->|Audit Record| Audit
 ```
 
 ---
@@ -104,13 +133,38 @@ An intelligent knowledge management engine built to control cognitive capacity, 
 * **Vercel Cron Integration:** Automated daily trigger pipeline executing spaced review dispatches with authorization header validation.
 
 ```mermaid
-graph TD
-    User[Web Dashboard / Telegram Bot] -->|Raw Research / Commands| Gateway[Next.js App Router API]
-    Gateway <-->|Structured JSON| OpenRouter[OpenRouter LLM Engine]
-    Gateway -->|Conflict Check| ConflictGuard[AI Contradiction Evaluator]
-    ConflictGuard -->|Persist Principles| DB[(SQLite / LibSQL Database)]
-    Cron[Vercel Daily Cron Job] -->|Trigger Interval Session| SpacedEngine[Spaced Repetition Algorithm]
-    SpacedEngine -->|Webhook Dispatch| Telegram[Telegram Bot API]
+graph TB
+    subgraph Ingress_Layer["Multi-Channel Ingress"]
+        Dashboard["Next.js 15 App Router Dashboard"]
+        TG_Hook["Telegram Bot Webhook Endpoint"]
+    end
+
+    subgraph AI_Intelligence["AI Agent & Conflict Engine"]
+        Slicer["LLM Note Slicing Agent (OpenRouter)"]
+        Guard["Side-by-Side Conflict & Duplicate Evaluator"]
+        Consult["AI Contextual Strategy Advisor"]
+    end
+
+    subgraph Memory_Engine["Retention Core & Storage"]
+        Spaced["SuperMemo / Ebbinghaus Spaced Repetition Engine"]
+        DB[(LibSQL / SQLite Database)]
+    end
+
+    subgraph Automation["Background Dispatcher"]
+        Cron["Vercel Daily Cron Worker"]
+        Dispatch["Telegram Interactive Session Dispatcher"]
+    end
+
+    Dashboard -->|Raw Text Dump| Slicer
+    TG_Hook -->|Commands / Log| Slicer
+    Slicer --> Guard
+    Guard -->|Validation Passed| DB
+    Guard -->|Contradiction Detected| Dashboard
+    Dashboard -->|Query AI| Consult
+    Cron -->|Daily Trigger| Spaced
+    Spaced -->|Due Principles| DB
+    Spaced -->|Build Reminders| Dispatch
+    Dispatch -->|Interactive Keyboards| TG_Hook
 ```
 
 ---
@@ -159,13 +213,42 @@ A multi-tenant enterprise platform that optimizes warehouse loading/unloading do
 * **E2E Testing:** Full Playwright test suite for critical booking workflows.
 
 ```mermaid
-graph TD
-    Carrier[Carrier / Driver] -->|Pre-Booking| Portal[Driver Portal - Next.js]
-    Portal --> Gateway[NestJS API Gateway]
-    Gateway --> QueueEngine[Dock Allocation Engine]
-    QueueEngine --> RedisCache[(Redis Lock & Queue)]
-    QueueEngine --> DB[(PostgreSQL)]
-    QueueEngine -->|WebSockets| Display[Gate Display & Guard Monitor]
+graph TB
+    subgraph Client_App["Client Operations Layer"]
+        DriverPortal["Driver Pre-Booking Portal (Next.js)"]
+        GuardGantt["Live Drag-and-Drop Gantt Board"]
+        GateMonitor["Real-Time Gate Display Screen"]
+    end
+
+    subgraph Gateway_Auth["NestJS Gateway & Security"]
+        NestAPI["NestJS API Gateway"]
+        WSGateway["WebSocket Gateway Server"]
+        LDAP["Active Directory LDAP Auth"]
+    end
+
+    subgraph Allocation_Engine["Queue & Scheduling Engine"]
+        SlotPicker["Auto Efficient Slot Allocator"]
+        LockManager["Redis Distributed Lock Manager"]
+        ChatEngine["Real-Time Driver-Staff Messenger"]
+    end
+
+    subgraph Storage_Audit["Data & Audit Trail"]
+        Redis[(Redis Queue & Cache)]
+        Postgres[(PostgreSQL Master DB)]
+        AuditLog["MoveTrace Audit Logger"]
+    end
+
+    DriverPortal -->|Slot Booking Request| NestAPI
+    GuardGantt -->|Drag & Drop Reposition| WSGateway
+    NestAPI -->|Authenticate User| LDAP
+    NestAPI --> SlotPicker
+    SlotPicker -->|Acquire Lock| LockManager
+    LockManager -->|Atomic Lock| Redis
+    SlotPicker -->|Persist Schedule| Postgres
+    SlotPicker -->|Record Audit| AuditLog
+    WSGateway <-->|Live Updates Broadcast| GuardGantt
+    WSGateway <-->|Live Queue Status| GateMonitor
+    ChatEngine <-->|Real-Time WebSockets| DriverPortal
 ```
 
 ---
@@ -197,11 +280,34 @@ An enterprise-grade Field Sales CRM for route planning, real-time GPS visit trac
 * **Sales Analytics:** Recharts-powered dashboards for target tracking and performance reporting.
 
 ```mermaid
-graph TD
-    Client[React + Leaflet GPS] <-->|REST / HTTPS| Backend[Express API Gateway]
-    Backend <-->|SOAP + NTLM| ERP[Microsoft Dynamics NAV]
-    Backend -->|WhatsApp Web| WA[Customer WhatsApp Dispatcher]
-    Backend <-->|Mongoose| DB[(MongoDB)]
+graph TB
+    subgraph Mobile_Client["Field Sales Web Application"]
+        SalesUI["React + Vite Single Page App"]
+        GPSModule["Leaflet Geofence Verification Engine"]
+        FormBuilder["Dynamic Visit Audit Form Engine"]
+    end
+
+    subgraph Backend_Gateway["Express API Gateway"]
+        ExpressAPI["Express.js REST Gateway"]
+        AuthMiddleware["Session & HTTPS Auth"]
+        CronSync["Hourly ERP Sync Scheduler"]
+    end
+
+    subgraph Enterprise_ERP["ERP & Integrations"]
+        SOAPClient["HTTP-NTLM SOAP Client"]
+        DynamicsERP[(MS Dynamics NAV ERP)]
+        WA_Dispatcher["WhatsApp Web Dispatcher (whatsapp-web.js)"]
+        MongoDB[(MongoDB Customer & Order Store)]
+    end
+
+    SalesUI -->|Check-in GPS & Sales Orders| ExpressAPI
+    GPSModule -->|Audited Coordinates| ExpressAPI
+    ExpressAPI --> AuthMiddleware
+    AuthMiddleware --> MongoDB
+    CronSync -->|Query Customer Master & Credit Limits| SOAPClient
+    SOAPClient <-->|NTLM Encrypted SOAP XML| DynamicsERP
+    ExpressAPI -->|Release Order Event| WA_Dispatcher
+    WA_Dispatcher -->|Automated Receipt Message| ClientWA[Client WhatsApp Number]
 ```
 
 ---
@@ -253,11 +359,33 @@ A high-performance mobile POS application for sales representatives and retail o
 * **Dynamic API Configuration:** Field agents configure and test custom backend URLs per subnet via an admin settings modal.
 
 ```mermaid
-graph TD
-    Client[Expo 52 Mobile Client] <-->|Sync Engine / REST| Server[Express API Server]
-    Client -->|TCP Socket| Printer[WiFi Thermal POS Printer]
-    Server <-->|Mongoose| DB[(MongoDB)]
-    Server <-->|REST API| Midtrans[Midtrans Payment Gateway]
+graph TB
+    subgraph Mobile_Device["Mobile Client (Expo 52 + React Native 0.76)"]
+        MobileUI["POS Mobile Interface"]
+        OfflineQueue["AsyncStorage Offline Transaction Queue"]
+        PrinterDriver["Raw ESC/POS Buffer & Direct TCP Socket Streamer"]
+        VoucherEngine["On-Device Voucher & Ledger Lock Service"]
+    end
+
+    subgraph Local_Hardware["Retail Hardware Layer"]
+        ThermalPrinter["WiFi / Network Thermal Receipt Printer"]
+    end
+
+    subgraph Backend_Cloud["Central Cloud Services"]
+        ExpressServer["Express.js API Gateway"]
+        SyncService["Auto Reconciler & Conflict Resolver"]
+        MongoDB[(MongoDB Database)]
+        Midtrans["Midtrans QRIS Payment Gateway"]
+    end
+
+    MobileUI -->|Cashier Checkout| OfflineQueue
+    MobileUI -->|Generate ESC/POS Bytes| PrinterDriver
+    PrinterDriver -->|TCP Socket Raw Buffer| ThermalPrinter
+    OfflineQueue -->|Connection Restored| SyncService
+    SyncService --> ExpressServer
+    ExpressServer --> MongoDB
+    ExpressServer <-->|QRIS Webhooks| Midtrans
+    MobileUI <-->|Online Voucher Check| VoucherEngine
 ```
 
 ---
@@ -284,12 +412,34 @@ A high-concurrency inventory reconciliation platform that automates physical cou
 * **Active Directory SSO:** Corporate LDAP authentication for large warehouse user management.
 
 ```mermaid
-graph TD
-    Scanner[Barcode Operator] -->|Scan Logs| App[React Router v7 Frontend]
-    App --> Gateway[Express API Server]
-    Gateway <-->|Prisma ORM| DB[(PostgreSQL)]
-    Gateway <-->|ioredis| Redis[(Redis Cache)]
-    Gateway -->|LDAP| AD[Active Directory]
+graph TB
+    subgraph Warehouse_Floor["Warehouse Floor Operations"]
+        BarcodeScanner["Barcode Scanner & Mobile Web App"]
+        ScanBuffer["Real-time Rack Scan Buffer"]
+    end
+
+    subgraph Reconciliation_Gateway["Backend API & Caching"]
+        ExpressGateway["Express.js API Gateway"]
+        RedisCache["ioredis High-Concurrency Cache"]
+        LDAP["Active Directory Corporate SSO"]
+    end
+
+    subgraph Discrepancy_Engine["Reconciliation & Delegation Core"]
+        PrismaORM["Prisma ORM Query Engine"]
+        DiscrepancyCalc["Physical vs Ledger Discrepancy Engine"]
+        DelegationWorkflow["Blind Recount Delegation Manager"]
+        Postgres[(PostgreSQL Master DB)]
+    end
+
+    BarcodeScanner -->|Scan Item Barcode & Rack ID| ScanBuffer
+    ScanBuffer --> ExpressGateway
+    ExpressGateway -->|Auth Staff| LDAP
+    ExpressGateway <-->|Cache Hot Inventory| RedisCache
+    ExpressGateway --> DiscrepancyCalc
+    DiscrepancyCalc -->|SUM(Physical Qty) - ERP Ledger| PrismaORM
+    PrismaORM --> Postgres
+    DiscrepancyCalc -->|Discrepancy Detected| DelegationWorkflow
+    DelegationWorkflow -->|Trigger Re-Scan Request| BarcodeScanner
 ```
 
 ---
