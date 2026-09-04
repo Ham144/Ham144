@@ -1,7 +1,7 @@
 # Hi, I'm Muhammad Yafizham 👋
 ### AI & Full-Stack Software Engineer | Enterprise Systems & LLM Workflows
 
-I am a Software Engineer at PT Catur Sukses Internasional with a proven track record of single-handedly architecting, deploying, and operating **14+ enterprise production systems** across logistics, AI agent workflows, sales routing, and backend automation. Fluent in English (**IELTS Band 7**), I specialize in building production AI/LLM pipelines, high-concurrency backend services, real-time logistics engines, and enterprise ERP integrations.
+I am a Software Engineer at PT Catur Sukses Internasional with a proven track record of single-handedly architecting, deploying, and operating **14+ enterprise production systems** across logistics, AI agent workflows, sales routing, and backend automation. Fluent in English, I specialize in building production AI/LLM pipelines, high-concurrency backend services, real-time logistics engines, and enterprise ERP integrations.
 
 [📄 Download My Resume (PDF)](https://github.com/Ham144/Ham144/raw/main/Resume_Muhammad_Yafizham_Batubara.pdf) | [💼 LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/)
 
@@ -20,7 +20,7 @@ I am a Software Engineer at PT Catur Sukses Internasional with a proven track re
 
 | Focus Area | Technologies |
 | :--- | :--- |
-| **AI & LLM Workflows** | OpenRouter, Gemini 2.5 Flash, OpenAI APIs, LangChain, LangGraph, Spaced Repetition Algorithms, Telegram Bot Webhooks |
+| **AI & LLM Workflows** | OpenRouter, Gemini 2.5 Flash, OpenAI APIs, Custom Prompt Orchestration, Structured JSON Outputs, Spaced Repetition Algorithms, Telegram Bot Webhooks |
 | **Backend & APIs** | NestJS, Express.js, Node.js, FastAPI, RESTful APIs, WebSockets (RedisIoAdapter), SOAP/NTLM |
 | **Databases & Caching** | PostgreSQL, MongoDB, Redis (ioredis), SQLite/LibSQL, Prisma ORM, Mongoose, Pgvector |
 | **Frontend & Mobile** | React 18, Next.js 15, React Native 0.76, Expo 52, React Flow, Tailwind CSS v4, Zustand |
