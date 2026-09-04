@@ -29,8 +29,10 @@ I am a Software Engineer at PT Catur Sukses Internasional with a proven track re
 
 ---
 
-> 🔒 **IP Protection Notice:**
-> Production source code for the flagship projects below is hosted in **private enterprise repositories** to protect proprietary business logic and company IP. Comprehensive architectural specifications, system diagrams, and UI galleries are presented here. Live production deployment links and code review access are provided for hiring evaluations.
+> 🔒 **Proprietary Commercial IP & Source Code Notice:**
+> The source code for the flagship platforms featured below represents proprietary commercial IP owned and architected by Muhammad Yafizham (Founder & Principal Systems Architect). All source repositories are strictly **Private** to protect custom engines, business logic, and commercial licensing rights.
+> 
+> Full architectural specifications, system design diagrams, UI screenshot galleries, and **Live Production Web Applications** are available below for evaluation. Private code audits or temporary read-only repository access can be arranged for technical hiring evaluations under mutual non-disclosure agreements (NDA).
 
 ---
 
