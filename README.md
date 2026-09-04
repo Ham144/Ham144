@@ -1,7 +1,7 @@
 # Hi, I'm Muhammad Yafizham 👋
 ### Full-Stack Software Engineer | Enterprise Systems & Logistics
 
-I design, build, and maintain production-grade enterprise applications — from warehouse logistics platforms and field sales CRMs to offline-first mobile POS systems. Fluent in English (IELTS Band 7), I have a proven track record of single-handedly architecting and delivering 14+ business-critical applications currently running in production environments.
+I am a Software Engineer at PT Catur Sukses Internasional with a proven track record of single-handedly architecting, deploying, and operating **14+ enterprise production systems** across logistics, sales routing, finance, and workflow automation. Fluent in English (**IELTS Band 7**), I specialize in building high-concurrency backend services, offline-first mobile apps, real-time logistics engines, and enterprise ERP integrations.
 
 [📄 Download My Resume (PDF)](https://github.com/Ham144/Ham144/raw/main/Resume_Muhammad_Yafizham_Batubara.pdf) | [💼 LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/)
 
@@ -20,16 +20,16 @@ I design, build, and maintain production-grade enterprise applications — from 
 
 | Focus Area | Technologies |
 | :--- | :--- |
-| **Backend & APIs** | NestJS, Express.js, Node.js, FastAPI, REST, WebSockets, SOAP/NTLM |
-| **Databases & Caching** | PostgreSQL, MongoDB, Redis, Prisma ORM, Mongoose |
+| **Backend & APIs** | NestJS, Express.js, Node.js, FastAPI, RESTful APIs, WebSockets, SOAP/NTLM |
+| **Databases & Caching** | PostgreSQL, MongoDB, Redis, Prisma ORM, Mongoose, Pgvector |
 | **Frontend & Mobile** | React, Next.js, React Native, Expo, React Flow, Tailwind CSS, Zustand |
 | **Infrastructure & DevOps** | Docker, Linux VPS, Nginx, CI/CD (GitHub Actions), LDAP/Active Directory |
-| **Integrations** | Microsoft Dynamics NAV (ERP), Midtrans Payment Gateway, Cloudflare R2, Telegram Bot API, WhatsApp Web API |
+| **Integrations** | MS Dynamics NAV (ERP), Midtrans Payment Gateway, Cloudflare R2, Telegram Bot API, WhatsApp Web API |
 
 ---
 
 > 🔒 **IP Protection Notice:**
-> Production source code for the projects below is hosted in **private repositories** to protect proprietary business logic and enterprise IP. Full architectural documentation, system diagrams, and UI screenshots are presented here. Code review access is available upon request for hiring evaluations.
+> Production source code for the flagship projects below is hosted in **private enterprise repositories** to protect proprietary business logic and company IP. Comprehensive architectural specifications, system diagrams, and UI galleries are presented here. Live production deployment links and code review access are provided for hiring evaluations.
 
 ---
 
@@ -39,8 +39,11 @@ I design, build, and maintain production-grade enterprise applications — from 
 
 ### 1. 🔄 Approval Workflow Engine (Approva.ai)
 
-> Dynamic multi-tenant approval system with a visual drag-and-drop workflow designer
+> Dynamic multi-tenant approval system with a visual drag-and-drop workflow designer  
+> 🔗 **Live Web Application:** [approva-ai.hexadim.com](https://approva-ai.hexadim.com)  
+> 📊 **Scale & Impact:** Adopted across 5+ corporate departments, automating 800+ multi-tier approval workflows monthly.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-approva--ai.hexadim.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://approva-ai.hexadim.com)
 ![React Flow](https://img.shields.io/badge/Frontend-React%20Flow%20V11-FF007A?style=flat-square&logo=react)
 ![React](https://img.shields.io/badge/UI-React%2018-61DAFB?style=flat-square&logo=react)
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?style=flat-square&logo=nodedotjs)
@@ -77,8 +80,11 @@ graph TD
 
 ### 2. 🗓️ Warehouse Queue Management System (WQMS)
 
-> Real-time loading dock booking and Gantt board carrier scheduler
+> Real-time loading dock booking and Gantt board carrier scheduler  
+> 🔗 **Live Web Application:** [orbit.pethalvoid.com](https://orbit.pethalvoid.com)  
+> 📊 **Scale & Impact:** Serves 12+ enterprise warehouse facilities, managing ~2,500+ monthly dock bookings with zero booking collisions.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-orbit.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://orbit.pethalvoid.com)
 ![NestJS](https://img.shields.io/badge/Backend-NestJS-E0234E?style=flat-square&logo=nestjs)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql)
 ![Redis](https://img.shields.io/badge/Cache-Redis-DC382D?style=flat-square&logo=redis)
@@ -129,8 +135,11 @@ graph TD
 
 ### 3. 🗺️ Field Sales CRM (S-BIT)
 
-> Location-verified sales routing and client order-taking CRM with ERP integration
+> Location-verified sales routing and client order-taking CRM with ERP integration  
+> 🔗 **Live Web Application:** [sfa.pethalvoid.com](https://sfa.pethalvoid.com)  
+> 📊 **Scale & Impact:** Tracks 50+ active field sales reps, auditing ~3,000+ geofenced client visits monthly with direct MS Dynamics NAV ERP synchronization.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-sfa.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sfa.pethalvoid.com)
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB?style=flat-square&logo=react)
 ![Express.js](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)
 ![Leaflet](https://img.shields.io/badge/Mapping-Leaflet%20GPS-199900?style=flat-square&logo=leaflet)
@@ -162,8 +171,11 @@ graph TD
 
 ### 4. 📱 Super POS Mobile
 
-> Offline-first mobile Point of Sale with direct thermal printing and payment gateway
+> Offline-first mobile Point of Sale with direct thermal printing and payment gateway  
+> 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  
+> 📊 **Scale & Impact:** Deployed across 40+ retail outlets & sales reps, processing ~15,000+ monthly transactions with zero transaction loss.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-pos.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://pos.pethalvoid.com)
 ![React Native](https://img.shields.io/badge/Mobile-React%20Native%200.76-61DAFB?style=flat-square&logo=react)
 ![Expo](https://img.shields.io/badge/Framework-Expo%2052-000020?style=flat-square&logo=expo)
 ![Express](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)
@@ -215,7 +227,8 @@ graph TD
 
 ### 5. 📦 Inventory Audit System
 
-> Physical stock auditing, barcode scanning, and recount delegation dashboard
+> Physical stock auditing, barcode scanning, and recount delegation dashboard  
+> 📊 **Scale & Impact:** Reconciles physical warehouse inventory across 100,000+ total SKU line items annually with automated discrepancy flagging.
 
 ![React Router v7](https://img.shields.io/badge/Framework-React%20Router%20v7-CA4245?style=flat-square&logo=reactrouter)
 ![Tailwind CSS v4](https://img.shields.io/badge/Styling-Tailwind%20v4-06B6D4?style=flat-square&logo=tailwindcss)
@@ -244,7 +257,8 @@ graph TD
 
 ### 6. 💰 Petty Cash Manager
 
-> Multi-warehouse petty cash journal with monthly budgeting and receipt archival
+> Multi-warehouse petty cash journal with monthly budgeting and receipt archival  
+> 📊 **Scale & Impact:** Controls branch expense allocation and receipt auditing across 15+ warehouse sites.
 
 ![NestJS](https://img.shields.io/badge/Backend-NestJS%2010-E0234E?style=flat-square&logo=nestjs)
 ![Next.js](https://img.shields.io/badge/Frontend-Next.js%2015-000000?style=flat-square&logo=nextdotjs)
