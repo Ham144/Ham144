@@ -1,7 +1,7 @@
 # Hi, I'm Muhammad Yafizham 👋
-### Full-Stack Software Engineer | Enterprise Systems & Logistics
+### AI & Full-Stack Software Engineer | Enterprise Systems & LLM Workflows
 
-I am a Software Engineer at PT Catur Sukses Internasional with a proven track record of single-handedly architecting, deploying, and operating **14+ enterprise production systems** across logistics, sales routing, finance, and workflow automation. Fluent in English (**IELTS Band 7**), I specialize in building high-concurrency backend services, offline-first mobile apps, real-time logistics engines, and enterprise ERP integrations.
+I am a Software Engineer at PT Catur Sukses Internasional with a proven track record of single-handedly architecting, deploying, and operating **14+ enterprise production systems** across logistics, AI agent workflows, sales routing, and backend automation. Fluent in English (**IELTS Band 7**), I specialize in building production AI/LLM pipelines, high-concurrency backend services, real-time logistics engines, and enterprise ERP integrations.
 
 [📄 Download My Resume (PDF)](https://github.com/Ham144/Ham144/raw/main/Resume_Muhammad_Yafizham_Batubara.pdf) | [💼 LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/)
 
@@ -20,11 +20,11 @@ I am a Software Engineer at PT Catur Sukses Internasional with a proven track re
 
 | Focus Area | Technologies |
 | :--- | :--- |
+| **AI & LLM Workflows** | OpenRouter, OpenAI APIs, LangChain, LangGraph, Spaced Repetition Algorithms, Telegram Bot Webhooks |
 | **Backend & APIs** | NestJS, Express.js, Node.js, FastAPI, RESTful APIs, WebSockets, SOAP/NTLM |
 | **Databases & Caching** | PostgreSQL, MongoDB, Redis, SQLite/LibSQL, Prisma ORM, Mongoose, Pgvector |
 | **Frontend & Mobile** | React, Next.js, React Native, Expo, React Flow, Tailwind CSS, Zustand |
 | **Infrastructure & DevOps** | Docker, Linux VPS, Nginx, CI/CD (GitHub Actions), LDAP/Active Directory |
-| **AI & Automation** | OpenRouter, OpenAI APIs, LangChain, Spaced Repetition Algorithms, Telegram Bot Webhooks |
 | **Integrations** | MS Dynamics NAV (ERP), Midtrans Payment Gateway, Cloudflare R2, Telegram Bot API, WhatsApp Web API |
 
 ---
@@ -79,7 +79,41 @@ graph TD
 
 ---
 
-### 2. 🗓️ Warehouse Queue Management System (WQMS)
+### 2. 🧠 Spaced Retention Bot & Cognitive AI Engine
+
+> AI-powered cognitive manager, spaced repetition scheduler, and knowledge conflict guard  
+> 🔗 **Live Web Application:** [retention.pethalvoid.com](https://retention.pethalvoid.com)  
+> 📊 **Scale & Impact:** Automates personal strategy retention, parses unstructured research notes with AI, and enforces decision consistency via automated Telegram dispatchers.
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-retention.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://retention.pethalvoid.com)
+![Next.js](https://img.shields.io/badge/Frontend-Next.js%2015-000000?style=flat-square&logo=nextdotjs)
+![OpenRouter](https://img.shields.io/badge/AI-OpenRouter%20LLM-6366F1?style=flat-square&logo=openai)
+![Telegram](https://img.shields.io/badge/Bot-Telegram%20Webhook-26A5E4?style=flat-square&logo=telegram)
+![SQLite](https://img.shields.io/badge/Database-SQLite%20%2F%20LibSQL-003B57?style=flat-square&logo=sqlite)
+![Vercel Cron](https://img.shields.io/badge/Scheduler-Vercel%20Cron-000000?style=flat-square&logo=vercel)
+
+An intelligent knowledge management engine built to control cognitive capacity, eliminate decision fatigue, and enforce long-term memory retention using spaced repetition algorithms combined with LLM-powered note parsing.
+
+**Key capabilities:**
+* **AI Note Slicing & Auto-Categorization:** Automatically processes raw research notes or strategic logs, structuring them into core principles and mapping them to domain threads using OpenRouter LLMs.
+* **AI Conflict Guard:** Prevents duplicate or contradictory strategic rules by performing side-by-side AI evaluation against historical database entries before persisting.
+* **Spaced Repetition Engine (SuperMemo / Ebbinghaus Curve):** Computes optimal review intervals and dispatches automated reminder sessions via Telegram Webhook APIs.
+* **Interactive Telegram Bot Interface:** Full remote control via `/focus` (RAM slot management), `/load` (10-second contextual cheatsheets), `/review` (inline mastery checks), and `/tanya` (AI business strategy consult).
+* **Vercel Cron Integration:** Automated daily trigger pipeline executing spaced review dispatches with authorization header validation.
+
+```mermaid
+graph TD
+    User[Web Dashboard / Telegram Bot] -->|Raw Research / Commands| Gateway[Next.js App Router API]
+    Gateway <-->|Structured JSON| OpenRouter[OpenRouter LLM Engine]
+    Gateway -->|Conflict Check| ConflictGuard[AI Contradiction Evaluator]
+    ConflictGuard -->|Persist Principles| DB[(SQLite / LibSQL Database)]
+    Cron[Vercel Daily Cron Job] -->|Trigger Interval Session| SpacedEngine[Spaced Repetition Algorithm]
+    SpacedEngine -->|Webhook Dispatch| Telegram[Telegram Bot API]
+```
+
+---
+
+### 3. 🗓️ Warehouse Queue Management System (WQMS)
 
 > Real-time loading dock booking and Gantt board carrier scheduler  
 > 🔗 **Live Web Application:** [orbit.pethalvoid.com](https://orbit.pethalvoid.com)  
@@ -134,7 +168,7 @@ graph TD
 
 ---
 
-### 3. 🗺️ Field Sales CRM (S-BIT)
+### 4. 🗺️ Field Sales CRM (S-BIT)
 
 > Location-verified sales routing and client order-taking CRM with ERP integration  
 > 🔗 **Live Web Application:** [sfa.pethalvoid.com](https://sfa.pethalvoid.com)  
@@ -170,7 +204,7 @@ graph TD
 
 ---
 
-### 4. 📱 Super POS Mobile
+### 5. 📱 Super POS Mobile
 
 > Offline-first mobile Point of Sale with direct thermal printing and payment gateway  
 > 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  
@@ -226,11 +260,13 @@ graph TD
 
 ---
 
-### 5. 📦 Inventory Audit System
+### 6. 📦 Inventory Audit System
 
 > Physical stock auditing, barcode scanning, and recount delegation dashboard  
+> 🔗 **Live Web Application:** [inventory.pethalvoid.com](https://inventory.pethalvoid.com)  
 > 📊 **Scale & Impact:** Reconciles physical warehouse inventory across 100,000+ total SKU line items annually with automated discrepancy flagging.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-inventory.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://inventory.pethalvoid.com)
 ![React Router v7](https://img.shields.io/badge/Framework-React%20Router%20v7-CA4245?style=flat-square&logo=reactrouter)
 ![Tailwind CSS v4](https://img.shields.io/badge/Styling-Tailwind%20v4-06B6D4?style=flat-square&logo=tailwindcss)
 ![Express](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)
@@ -252,38 +288,6 @@ graph TD
     Gateway <-->|Prisma ORM| DB[(PostgreSQL)]
     Gateway <-->|ioredis| Redis[(Redis Cache)]
     Gateway -->|LDAP| AD[Active Directory]
-```
-
----
-
-### 6. 🧠 Spaced Retention Bot & Cognitive AI Engine
-
-> AI-powered cognitive manager, spaced repetition scheduler, and knowledge conflict guard  
-> 📊 **Scale & Impact:** Automates personal strategy retention, parses unstructured research notes with AI, and enforces decision consistency via automated Telegram dispatchers.
-
-![Next.js](https://img.shields.io/badge/Frontend-Next.js%2015-000000?style=flat-square&logo=nextdotjs)
-![OpenRouter](https://img.shields.io/badge/AI-OpenRouter%20LLM-6366F1?style=flat-square&logo=openai)
-![Telegram](https://img.shields.io/badge/Bot-Telegram%20Webhook-26A5E4?style=flat-square&logo=telegram)
-![SQLite](https://img.shields.io/badge/Database-SQLite%20%2F%20LibSQL-003B57?style=flat-square&logo=sqlite)
-![Vercel Cron](https://img.shields.io/badge/Scheduler-Vercel%20Cron-000000?style=flat-square&logo=vercel)
-
-An intelligent knowledge management engine built to control cognitive capacity, eliminate decision fatigue, and enforce long-term memory retention using spaced repetition algorithms combined with LLM-powered note parsing.
-
-**Key capabilities:**
-* **AI Note Slicing & Auto-Categorization:** Automatically processes raw research notes or strategic logs, structuring them into core principles and mapping them to domain threads using OpenRouter LLMs.
-* **AI Conflict Guard:** Prevents duplicate or contradictory strategic rules by performing side-by-side AI evaluation against historical database entries before persisting.
-* **Spaced Repetition Engine (SuperMemo / Ebbinghaus Curve):** Computes optimal review intervals and dispatches automated reminder sessions via Telegram Webhook APIs.
-* **Interactive Telegram Bot Interface:** Full remote control via `/focus` (RAM slot management), `/load` (10-second contextual cheatsheets), `/review` (inline mastery checks), and `/tanya` (AI business strategy consult).
-* **Vercel Cron Integration:** Automated daily trigger pipeline executing spaced review dispatches with authorization header validation.
-
-```mermaid
-graph TD
-    User[Web Dashboard / Telegram Bot] -->|Raw Research / Commands| Gateway[Next.js App Router API]
-    Gateway <-->|Structured JSON| OpenRouter[OpenRouter LLM Engine]
-    Gateway -->|Conflict Check| ConflictGuard[AI Contradiction Evaluator]
-    ConflictGuard -->|Persist Principles| DB[(SQLite / LibSQL Database)]
-    Cron[Vercel Daily Cron Job] -->|Trigger Interval Session| SpacedEngine[Spaced Repetition Algorithm]
-    SpacedEngine -->|Webhook Dispatch| Telegram[Telegram Bot API]
 ```
 
 ---
