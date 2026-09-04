@@ -255,26 +255,28 @@ graph TB
 
 ### 4. 🗺️ Field Sales CRM (S-BIT)
 
-> Location-verified sales routing and client order-taking CRM with ERP integration  
+> Location-verified sales routing and client order-taking CRM with dual-backend ERP microservices  
 > 🔗 **Live Web Application:** [sfa.pethalvoid.com](https://sfa.pethalvoid.com)  
 > 📊 **Scale & Impact:** Tracks 50+ active field sales reps, auditing ~3,000+ geofenced client visits monthly with direct MS Dynamics NAV ERP synchronization.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-sfa.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sfa.pethalvoid.com)
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB?style=flat-square&logo=react)
-![Express.js](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)
+![Express.js](https://img.shields.io/badge/Primary%20Backend-Express.js-000000?style=flat-square&logo=express)
+![SO Microservice](https://img.shields.io/badge/SO%20Microservice-MIDCSI%20Backend-FF6C37?style=flat-square&logo=node.js)
 ![Leaflet](https://img.shields.io/badge/Mapping-Leaflet%20GPS-199900?style=flat-square&logo=leaflet)
 ![WhatsApp](https://img.shields.io/badge/Notifications-WhatsApp-25D366?style=flat-square&logo=whatsapp)
 ![Dynamics NAV](https://img.shields.io/badge/ERP-MS%20Dynamics%20NAV-0078D4?style=flat-square)
 
-An enterprise-grade Field Sales CRM for route planning, real-time GPS visit tracking, automated WhatsApp notifications, and deep Microsoft Dynamics NAV ERP integration.
+An enterprise-grade Field Sales CRM for route planning, real-time GPS visit tracking, automated WhatsApp notifications, and deep Microsoft Dynamics NAV ERP integration operating on a decoupled **Dual-Backend Microservice Architecture**.
 
 <p align="center">
   <img src="assets/screenshots/sbit-home.png" width="90%" alt="Field Sales CRM Dashboard" />
 </p>
 
 **Key capabilities:**
+* **Dual-Backend Microservice Architecture:** Decouples core CRM operations (visits, geofencing, agendas) from the specialized Sales Order (SO) & ERP Integration Microservice (`MIDCSI Backend`) for maximum fault tolerance and isolated scaling.
 * **GPS Geofence Auditing:** Records real-time GPS coordinates during sales visits (Leaflet maps), eliminating fake check-ins.
-* **Dynamics NAV ERP Sync:** Hourly SOAP/NTLM cron jobs synchronize customer registers, credit limits, sales targets, and push field-generated orders back to ERP.
+* **Dynamics NAV ERP Sync:** Hourly NTLM v2 SOAP XML cron jobs query ERP endpoints to synchronize customer master data, credit limits, sales targets, and push field-generated Sales Orders.
 * **Automated WhatsApp Dispatcher:** Sends order confirmations and visit receipts directly to customer WhatsApp contacts via `whatsapp-web.js`.
 * **Dynamic Audit Forms:** Admins modify required visit questions (photo uploads, stock counts) without redeploying code.
 * **Sales Analytics:** Recharts-powered dashboards for target tracking and performance reporting.
@@ -287,27 +289,35 @@ graph TB
         FormBuilder["Dynamic Visit Audit Form Engine"]
     end
 
-    subgraph Backend_Gateway["Express API Gateway"]
-        ExpressAPI["Express.js REST Gateway"]
-        AuthMiddleware["Session & HTTPS Auth"]
-        CronSync["Hourly ERP Sync Scheduler"]
-    end
-
-    subgraph Enterprise_ERP["ERP & Integrations"]
-        SOAPClient["HTTP-NTLM SOAP Client"]
-        DynamicsERP[(MS Dynamics NAV ERP)]
+    subgraph Primary_Backend["Primary CRM Backend Gateway (Node.js/Express)"]
+        CRM_API["CRM Core API Controller"]
+        VisitEngine["Customer Visit & Agenda Manager"]
         WA_Dispatcher["WhatsApp Web Dispatcher (whatsapp-web.js)"]
-        MongoDB[(MongoDB Customer & Order Store)]
+        MongoDB[(MongoDB Master Database)]
     end
 
-    SalesUI -->|Check-in GPS & Sales Orders| ExpressAPI
-    GPSModule -->|Audited Coordinates| ExpressAPI
-    ExpressAPI --> AuthMiddleware
-    AuthMiddleware --> MongoDB
-    CronSync -->|Query Customer Master & Credit Limits| SOAPClient
-    SOAPClient <-->|NTLM Encrypted SOAP XML| DynamicsERP
-    ExpressAPI -->|Release Order Event| WA_Dispatcher
-    WA_Dispatcher -->|Automated Receipt Message| ClientWA[Client WhatsApp Number]
+    subgraph SO_Microservice["Sales Order (SO) Microservice Backend (MIDCSI)"]
+        SO_Gateway["Sales Order Gateway & Proxy"]
+        NTLM_Auth["NTLM v2 SOAP Authentication Service"]
+        CronSync["Hourly ERP Sync Engine"]
+    end
+
+    subgraph Enterprise_ERP["Enterprise ERP Infrastructure"]
+        DynamicsERP[(MS Dynamics NAV ERP)]
+        ClientWA[Client WhatsApp Contacts]
+    end
+
+    SalesUI -->|Check-in GPS & Visit Audits| CRM_API
+    GPSModule -->|Verified Coordinates| CRM_API
+    FormBuilder -->|Dynamic Form Logs| CRM_API
+    CRM_API <-->|Mongoose ODM| MongoDB
+    CRM_API -->|Dispatch Receipts| WA_Dispatcher
+    WA_Dispatcher -->|Automated WA Message| ClientWA
+
+    SalesUI -->|Submit Sales Orders| SO_Gateway
+    SO_Gateway <-->|NTLM v2 Encrypted SOAP XML| DynamicsERP
+    CronSync <-->|Hourly Sync: Customers & Credit Limits| DynamicsERP
+    CronSync -->|Update Local Master Data| MongoDB
 ```
 
 ---
@@ -436,7 +446,7 @@ graph TB
     ExpressGateway -->|Auth Staff| LDAP
     ExpressGateway <-->|Cache Hot Inventory| RedisCache
     ExpressGateway --> DiscrepancyCalc
-    DiscrepancyCalc -->|SUM(Physical Qty) - ERP Ledger| PrismaORM
+    DiscrepancyCalc -->|Compare Physical Qty vs ERP Ledger| PrismaORM
     PrismaORM --> Postgres
     DiscrepancyCalc -->|Discrepancy Detected| DelegationWorkflow
     DelegationWorkflow -->|Trigger Re-Scan Request| BarcodeScanner
