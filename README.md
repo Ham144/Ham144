@@ -42,17 +42,19 @@ I am a Software Engineer at PT Catur Sukses Internasional with a proven track re
 
 ### 1. 🔄 Approval Workflow Engine (Approva.ai)
 
-> Dynamic multi-tenant approval system with a visual drag-and-drop workflow designer  
+> Dynamic multi-tenant & super-tenant approval system with a visual drag-and-drop workflow designer  
 > 🔗 **Live Web Application:** [approva-ai.hexadim.com](https://approva-ai.hexadim.com)  
 > 📊 **Scale & Impact:** Adopted across 5+ corporate departments, automating 800+ multi-tier approval workflows monthly.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-approva--ai.hexadim.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://approva-ai.hexadim.com)
 ![React Flow](https://img.shields.io/badge/Frontend-React%20Flow%20V11-FF007A?style=flat-square&logo=react)
-![React](https://img.shields.io/badge/UI-React%2018-61DAFB?style=flat-square&logo=react)
+![React](https://img.shields.io/badge/UI-React%2018%20%2B%20Vite-61DAFB?style=flat-square&logo=react)
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?style=flat-square&logo=nodedotjs)
+![Redis](https://img.shields.io/badge/Cache-Redis-DC382D?style=flat-square&logo=redis)
 ![Active Directory](https://img.shields.io/badge/Auth-LDAP%20%2F%20Active%20Directory-0078D4?style=flat-square&logo=windows)
+![Cloudflare](https://img.shields.io/badge/Security-Cloudflare%20Turnstile-F38020?style=flat-square&logo=cloudflare)
 
-Replaces hardcoded business approval paths with a visual graph editor. Administrators configure conditional routing (e.g., auto-escalate when purchase value exceeds threshold) with digital signatures and multi-channel alert dispatches.
+Replaces hardcoded business approval paths with a visual graph editor. Enterprise administrators visually configure conditional routing (e.g., auto-escalating based on department categories, monetary thresholds, or custom logic matrices) with digital canvas signatures, Redis caching, and automated multi-channel alert dispatches.
 
 <p align="center">
   <img src="assets/screenshots/approval-interactive-workflow.png" width="90%" alt="Interactive Workflow Hub" />
@@ -64,48 +66,55 @@ Replaces hardcoded business approval paths with a visual graph editor. Administr
 </p>
 
 **Key capabilities:**
-* **Visual Workflow Designer:** Drag-and-drop graph nodes (React Flow V11) to build multi-tier approval chains — no code changes, no redeployment.
-* **Conditional Routing Engine:** Evaluates submitter roles, transaction values, and department rules to dynamically route each approval request.
-* **Corporate SSO:** Authenticates via local Active Directory (LDAP) for unified enterprise identity management.
-* **Multi-Channel Notifications:** Dispatches real-time alerts through Telegram Bot API and SMTP email upon each approval stage transition.
-* **Digital Signatures & Audit Trail:** Every approval step is cryptographically signed and logged for compliance.
+* **Visual Workflow Designer:** Drag-and-drop graph nodes (React Flow V11) to construct multi-tier approval chains, custom form inputs, and dynamic decision logic — no code changes, no redeployment.
+* **Super-Tenant & Cross-Org Flow Duplication:** Multi-tenant architecture with super-admin controls allowing instant replication of complex workflow templates across independent organizational domains.
+* **Redis High-Concurrency Caching Layer:** Custom `RedisService` middleware caching active flow instances, department hierarchies, and rate-limiting high-volume approval submissions.
+* **Digital Signature & ROI PDF Exporter:** Built-in html5 canvas digital signature capture (`SignatureInput`), SHA-256 audit trails, and automated jsPDF financial ROI statement generation (`RoiStatementModal`).
+* **Active Directory SSO & Cloudflare Security:** Integrates local Active Directory (LDAP) for corporate Single Sign-On and Cloudflare Turnstile Captcha to prevent automated bot submissions.
 
 ```mermaid
 graph TB
-    subgraph Client_Layer["Frontend Studio (React 18 + Vite)"]
-        UI["React Flow V11 Graph Editor"]
-        Props["Node Property & Condition Panel"]
-        ROI["ROI & Legal Modal Components"]
+    subgraph Client_Studio["Frontend Studio (React 18 + Vite 5)"]
+        Canvas["React Flow V11 Graph Canvas Editor"]
+        SignatureCanvas["Digital Signature Capture Canvas"]
+        ROIExporter["jsPDF ROI Statement Exporter"]
+        Turnstile["Cloudflare Turnstile Captcha"]
     end
 
-    subgraph Auth_Gateway["Gateway & Corporate Security"]
-        Gateway["Express API Gateway"]
-        AD["Active Directory (LDAP SSO)"]
-        JWT["JWT & Role Authorization"]
+    subgraph Security_Gateway["Express API Gateway & Security"]
+        ExpressRouter["Express.js API Router"]
+        RedisMiddleware["Redis Caching & Rate Limit Middleware"]
+        LDAP_Auth["Active Directory (LDAP SSO Adapter)"]
+        SuperTenantGuard["Super-Tenant Domain Isolator"]
     end
 
-    subgraph Engine_Core["Workflow Execution Core"]
-        DAG["DAG Graph State Resolver"]
-        Evaluator["Dynamic Condition Evaluator"]
-        Tenant["Multi-Tenant Scope Engine"]
+    subgraph Workflow_Engine["DAG Workflow & Logic Resolver"]
+        DAG_Resolver["DAG Graph State Resolver"]
+        LogicMatcher["Logic & Threshold Evaluator"]
+        DeptMatrix["Department Hierarchy Matrix"]
     end
 
-    subgraph Dispatch_Bus["Notification & Dispatch Engine"]
-        Telegram["Telegram Bot Webhooks"]
-        Mailer["SMTP Email Dispatcher"]
-        Audit["SHA-256 Signature Log DB"]
+    subgraph Integration_Storage["Storage & Notification Bus"]
+        RedisStore[(Redis Cache & Rate Store)]
+        MongoDB[(MongoDB Master Cluster)]
+        TelegramBot["Telegram Bot Alert Dispatcher"]
+        SMTPMail["SMTP Email Service"]
     end
 
-    UI -->|Visual Graph Schema| Gateway
-    Props -->|Node Rules| Gateway
-    Gateway -->|Auth Request| AD
-    AD -->|LDAP Token| JWT
-    JWT --> DAG
-    DAG --> Evaluator
-    Evaluator --> Tenant
-    Tenant -->|Stage Transition| Telegram
-    Tenant -->|Approval Email| Mailer
-    Tenant -->|Audit Record| Audit
+    Canvas -->|Visual Graph Schema| ExpressRouter
+    SignatureCanvas -->|Signed Canvas Bytes| ExpressRouter
+    Turnstile -->|Validate Token| ExpressRouter
+    ExpressRouter --> RedisMiddleware
+    RedisMiddleware <-->|Check Cached Flows| RedisStore
+    ExpressRouter -->|Authenticate Staff| LDAP_Auth
+    LDAP_Auth --> SuperTenantGuard
+    SuperTenantGuard --> DAG_Resolver
+    DAG_Resolver --> LogicMatcher
+    LogicMatcher --> DeptMatrix
+    DeptMatrix <-->|Mongoose ODM| MongoDB
+    DeptMatrix -->|Dispatch Approval Stage| TelegramBot
+    DeptMatrix -->|Send Notification Email| SMTPMail
+    ROIExporter -->|Export PDF Report| ClientUser[End User Download]
 ```
 
 ---
