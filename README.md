@@ -20,12 +20,12 @@ I am a Software Engineer at PT Catur Sukses Internasional with a proven track re
 
 | Focus Area | Technologies |
 | :--- | :--- |
-| **AI & LLM Workflows** | OpenRouter, OpenAI APIs, LangChain, LangGraph, Spaced Repetition Algorithms, Telegram Bot Webhooks |
-| **Backend & APIs** | NestJS, Express.js, Node.js, FastAPI, RESTful APIs, WebSockets, SOAP/NTLM |
-| **Databases & Caching** | PostgreSQL, MongoDB, Redis, SQLite/LibSQL, Prisma ORM, Mongoose, Pgvector |
-| **Frontend & Mobile** | React, Next.js, React Native, Expo, React Flow, Tailwind CSS, Zustand |
+| **AI & LLM Workflows** | OpenRouter, Gemini 2.5 Flash, OpenAI APIs, LangChain, LangGraph, Spaced Repetition Algorithms, Telegram Bot Webhooks |
+| **Backend & APIs** | NestJS, Express.js, Node.js, FastAPI, RESTful APIs, WebSockets (RedisIoAdapter), SOAP/NTLM |
+| **Databases & Caching** | PostgreSQL, MongoDB, Redis (ioredis), SQLite/LibSQL, Prisma ORM, Mongoose, Pgvector |
+| **Frontend & Mobile** | React 18, Next.js 15, React Native 0.76, Expo 52, React Flow, Tailwind CSS v4, Zustand |
 | **Infrastructure & DevOps** | Docker, Linux VPS, Nginx, CI/CD (GitHub Actions), LDAP/Active Directory |
-| **Integrations** | MS Dynamics NAV (ERP), Midtrans Payment Gateway, Cloudflare R2, Telegram Bot API, WhatsApp Web API |
+| **Integrations** | MS Dynamics NAV (ERP), Midtrans Payment Gateway, Cloudflare R2 / Turnstile, Telegram Bot API, WhatsApp Web API |
 
 ---
 
@@ -121,24 +121,24 @@ graph TB
 
 ### 2. 🧠 Spaced Retention Bot & Cognitive AI Engine
 
-> AI-powered cognitive manager, spaced repetition scheduler, and knowledge conflict guard  
+> AI-powered cognitive manager, LLM note slicer, spaced repetition scheduler, and knowledge conflict guard  
 > 🔗 **Live Web Application:** [retention.pethalvoid.com](https://retention.pethalvoid.com)  
 > 📊 **Scale & Impact:** Automates personal strategy retention, parses unstructured research notes with AI, and enforces decision consistency via automated Telegram dispatchers.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-retention.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://retention.pethalvoid.com)
 ![Next.js](https://img.shields.io/badge/Frontend-Next.js%2015-000000?style=flat-square&logo=nextdotjs)
-![OpenRouter](https://img.shields.io/badge/AI-OpenRouter%20LLM-6366F1?style=flat-square&logo=openai)
+![OpenRouter](https://img.shields.io/badge/AI-OpenRouter%20(Gemini%202.5%20Flash)-6366F1?style=flat-square&logo=openai)
 ![Telegram](https://img.shields.io/badge/Bot-Telegram%20Webhook-26A5E4?style=flat-square&logo=telegram)
-![SQLite](https://img.shields.io/badge/Database-SQLite%20%2F%20LibSQL-003B57?style=flat-square&logo=sqlite)
+![SQLite](https://img.shields.io/badge/Database-LibSQL%20%2F%20SQLite-003B57?style=flat-square&logo=sqlite)
 ![Vercel Cron](https://img.shields.io/badge/Scheduler-Vercel%20Cron-000000?style=flat-square&logo=vercel)
 
 An intelligent knowledge management engine built to control cognitive capacity, eliminate decision fatigue, and enforce long-term memory retention using spaced repetition algorithms combined with LLM-powered note parsing.
 
 **Key capabilities:**
-* **AI Note Slicing & Auto-Categorization:** Automatically processes raw research notes or strategic logs, structuring them into core principles and mapping them to domain threads using OpenRouter LLMs.
-* **AI Conflict Guard:** Prevents duplicate or contradictory strategic rules by performing side-by-side AI evaluation against historical database entries before persisting.
-* **Spaced Repetition Engine (SuperMemo / Ebbinghaus Curve):** Computes optimal review intervals and dispatches automated reminder sessions via Telegram Webhook APIs.
-* **Interactive Telegram Bot Interface:** Full remote control via `/focus` (RAM slot management), `/load` (10-second contextual cheatsheets), `/review` (inline mastery checks), and `/tanya` (AI business strategy consult).
+* **LLM Note Slicing & Auto-Categorization:** Uses structured JSON mode (`response_format: { type: "json_object" }`) via OpenRouter (`google/gemini-2.5-flash`) to parse raw text dumps into core principles and auto-map them to domain threads (`pethalvoid`, `nutra`, `career-search`).
+* **AI Conflict Guard:** Evaluates new rules against historical database entries in real-time. Duplicates are auto-bypassed, while contradictions trigger a side-by-side resolution panel. Low confidence scores held for manual review.
+* **Spaced Repetition Engine (SuperMemo / Ebbinghaus Curve):** Computes memory decay intervals and dispatches automated reminder sessions via Telegram Webhook APIs.
+* **Interactive Telegram Bot & Strategy Advisor:** Remote control via `/focus` (RAM slot management), `/load` (10-second contextual cheatsheets), `/review` (inline mastery checks), and `/tanya` (AI business strategy consultant filtering internet queries through custom principles).
 * **Vercel Cron Integration:** Automated daily trigger pipeline executing spaced review dispatches with authorization header validation.
 
 ```mermaid
@@ -149,7 +149,7 @@ graph TB
     end
 
     subgraph AI_Intelligence["AI Agent & Conflict Engine"]
-        Slicer["LLM Note Slicing Agent (OpenRouter)"]
+        Slicer["LLM Note Slicer (OpenRouter / Gemini 2.5)"]
         Guard["Side-by-Side Conflict & Duplicate Evaluator"]
         Consult["AI Contextual Strategy Advisor"]
     end
@@ -180,14 +180,14 @@ graph TB
 
 ### 3. 🗓️ Warehouse Queue Management System (WQMS)
 
-> Real-time loading dock booking and Gantt board carrier scheduler  
+> Real-time loading dock booking, RedisIoAdapter WebSocket cluster, and Gantt board carrier scheduler  
 > 🔗 **Live Web Application:** [orbit.pethalvoid.com](https://orbit.pethalvoid.com)  
 > 📊 **Scale & Impact:** Serves 12+ enterprise warehouse facilities, managing ~2,500+ monthly dock bookings with zero booking collisions.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-orbit.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://orbit.pethalvoid.com)
 ![NestJS](https://img.shields.io/badge/Backend-NestJS-E0234E?style=flat-square&logo=nestjs)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql)
-![Redis](https://img.shields.io/badge/Cache-Redis-DC382D?style=flat-square&logo=redis)
+![Redis](https://img.shields.io/badge/Cache-Redis%20(RedisIoAdapter)-DC382D?style=flat-square&logo=redis)
 ![Next.js](https://img.shields.io/badge/Frontend-Next.js-000000?style=flat-square&logo=nextdotjs)
 ![Playwright](https://img.shields.io/badge/Testing-Playwright-2EAD33?style=flat-square&logo=playwright)
 
@@ -214,10 +214,10 @@ A multi-tenant enterprise platform that optimizes warehouse loading/unloading do
 | <img src="assets/screenshots/wqms-realtime-messanger.webp" width="100%" alt="Driver-Staff Messenger" /> | <img src="assets/screenshots/wqms-all-members-in-1-organization-management.webp" width="100%" alt="Organization Members" /> |
 
 **Key capabilities:**
-* **Dock Allocation Algorithm:** Prevents double-booking using Redis distributed cache locks and automatic collision resolution.
-* **Live Gantt Board:** Warehouse guards and dock managers see real-time drag-and-drop queue boards via WebSocket updates.
-* **Pre-Booking Portal:** Vendors and drivers reserve specific arrival time slots, reducing unscheduled congestion.
-* **Real-time Messenger:** Persistent, authenticated chat rooms between drivers and warehouse dispatchers.
+* **RedisIoAdapter Cluster WebSockets:** Custom `RedisIoAdapter` service scaling NestJS Socket.io gateways across multi-node server deployments for zero-latency live board updates (`booking.gateway.ts`).
+* **Busy-Time Blackout Manager:** Dynamic slot allocation engine (`busy-time.service`) auto-blocking loading docks for warehouse maintenance, shift changes, or holiday breaks.
+* **Collision-Free Queue Algorithm:** Prevents double-booking using Redis distributed cache locks and automatic open-slot suggestions.
+* **Integrated Driver-Staff Messenger:** Real-time persistent WebSocket chat rooms between drivers and warehouse dispatchers (`chat.gateway.ts`).
 * **Active Directory SSO:** Unique LDAP configuration per tenant organization.
 * **E2E Testing:** Full Playwright test suite for critical booking workflows.
 
@@ -231,18 +231,19 @@ graph TB
 
     subgraph Gateway_Auth["NestJS Gateway & Security"]
         NestAPI["NestJS API Gateway"]
-        WSGateway["WebSocket Gateway Server"]
+        WSGateway["WebSocket Gateway (RedisIoAdapter Cluster)"]
         LDAP["Active Directory LDAP Auth"]
     end
 
     subgraph Allocation_Engine["Queue & Scheduling Engine"]
         SlotPicker["Auto Efficient Slot Allocator"]
         LockManager["Redis Distributed Lock Manager"]
+        BusyTime["Busy-Time Blackout Allocator"]
         ChatEngine["Real-Time Driver-Staff Messenger"]
     end
 
     subgraph Storage_Audit["Data & Audit Trail"]
-        Redis[(Redis Queue & Cache)]
+        Redis[(Redis Queue & IoAdapter Store)]
         Postgres[(PostgreSQL Master DB)]
         AuditLog["MoveTrace Audit Logger"]
     end
@@ -251,10 +252,12 @@ graph TB
     GuardGantt -->|Drag & Drop Reposition| WSGateway
     NestAPI -->|Authenticate User| LDAP
     NestAPI --> SlotPicker
+    SlotPicker --> BusyTime
     SlotPicker -->|Acquire Lock| LockManager
     LockManager -->|Atomic Lock| Redis
     SlotPicker -->|Persist Schedule| Postgres
     SlotPicker -->|Record Audit| AuditLog
+    WSGateway <-->|Redis Pub/Sub Sync| Redis
     WSGateway <-->|Live Updates Broadcast| GuardGantt
     WSGateway <-->|Live Queue Status| GateMonitor
     ChatEngine <-->|Real-Time WebSockets| DriverPortal
@@ -333,7 +336,7 @@ graph TB
 
 ### 5. 📱 Super POS Mobile
 
-> Offline-first mobile Point of Sale with direct thermal printing and payment gateway  
+> Offline-first mobile Point of Sale with multi-tier promo engine, thermal printing, and payment gateway  
 > 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  
 > 📊 **Scale & Impact:** Deployed across 40+ retail outlets & sales reps, processing ~15,000+ monthly transactions with zero transaction loss.
 
@@ -371,11 +374,11 @@ A high-performance mobile POS application for sales representatives and retail o
 | <img src="assets/screenshots/customer-database.webp" width="100%" alt="Customer Registry" /> | <img src="assets/screenshots/stack-trace.webp" width="100%" alt="Stack Tracing" /> |
 
 **Key capabilities:**
+* **Multi-Layer Voucher & Promo Engine:** Middleware evaluation stack (`checkDiskon`, `checkPromo`, `checkVoucher`, `generateVoucherCheck`) validating multi-tier vouchers, item bundle discounts, and outlet-specific rules.
 * **Offline-First Sync Engine:** Transactions complete fully offline in `AsyncStorage`, then auto-reconcile with the central MongoDB server once connectivity returns.
 * **Direct ESC/POS Thermal Printing:** Generates raw ESC/POS command buffers and streams them over TCP sockets to network/WiFi thermal printers — no drivers or spoolers needed.
 * **Midtrans Payment Gateway:** Generates dynamic QRIS codes and payment links in-app with automated webhook settlement listeners.
-* **Promo & Discount Engine:** Evaluates multi-tier vouchers, item bundles, and outlet-specific discounts locally on-device.
-* **Dynamic API Configuration:** Field agents configure and test custom backend URLs per subnet via an admin settings modal.
+* **Automated Invoice & Voucher Crons:** Background cron services (`emailKwitansi.js`, `pengirimanVoucherCode.js`) dispatching automated PDF receipts and digital voucher dispatches to customers.
 
 ```mermaid
 graph TB
@@ -390,11 +393,13 @@ graph TB
         ThermalPrinter["WiFi / Network Thermal Receipt Printer"]
     end
 
-    subgraph Backend_Cloud["Central Cloud Services"]
+    subgraph Backend_Cloud["Central Cloud Services & Promo Engine"]
         ExpressServer["Express.js API Gateway"]
+        PromoStack["Promo, Diskon & Voucher Middleware Stack"]
         SyncService["Auto Reconciler & Conflict Resolver"]
-        MongoDB[(MongoDB Database)]
+        MongoDB[(MongoDB Master Database)]
         Midtrans["Midtrans QRIS Payment Gateway"]
+        CronServices["Automated Kwitansi & Voucher Cron Jobs"]
     end
 
     MobileUI -->|Cashier Checkout| OfflineQueue
@@ -402,8 +407,10 @@ graph TB
     PrinterDriver -->|TCP Socket Raw Buffer| ThermalPrinter
     OfflineQueue -->|Connection Restored| SyncService
     SyncService --> ExpressServer
-    ExpressServer --> MongoDB
+    ExpressServer --> PromoStack
+    PromoStack --> MongoDB
     ExpressServer <-->|QRIS Webhooks| Midtrans
+    CronServices -->|Send PDF Receipt & Vouchers| Customer[Customer Email / Phone]
     MobileUI <-->|Online Voucher Check| VoucherEngine
 ```
 
@@ -411,7 +418,7 @@ graph TB
 
 ### 6. 📦 Inventory Audit System
 
-> Physical stock auditing, barcode scanning, and recount delegation dashboard  
+> Physical stock auditing, high-concurrency ioredis caching, barcode scanning, and recount delegation dashboard  
 > 🔗 **Live Web Application:** [inventory.pethalvoid.com](https://inventory.pethalvoid.com)  
 > 📊 **Scale & Impact:** Reconciles physical warehouse inventory across 100,000+ total SKU line items annually with automated discrepancy flagging.
 
@@ -420,12 +427,13 @@ graph TB
 ![Tailwind CSS v4](https://img.shields.io/badge/Styling-Tailwind%20v4-06B6D4?style=flat-square&logo=tailwindcss)
 ![Express](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql)
-![Redis](https://img.shields.io/badge/Cache-Redis-DC382D?style=flat-square&logo=redis)
+![Redis](https://img.shields.io/badge/Cache-Redis%20(ioredis)-DC382D?style=flat-square&logo=redis)
 
 A high-concurrency inventory reconciliation platform that automates physical count tracking, computes stock discrepancies against ERP ledgers, and manages recount delegation workflows.
 
 **Key capabilities:**
-* **Digital Scan Logging:** Operators scan barcodes and register physical counts mapped to specific shelves, racks, and warehouse branches in real-time.
+* **High-Concurrency ioredis Caching:** Custom `ioredis` service caching hot SKU catalog filters, rack mappings (`office-mapping.ts`), and scan approval logs for instant barcode verification.
+* **Digital Scan Logging:** Warehouse operators scan barcodes and register physical counts mapped to specific shelves, racks, and warehouse branches in real-time.
 * **Discrepancy Reconciliation Engine:** Automatically sums physical logs per SKU/rack and compares against ERP system values — flagging items as `MATCHED` or `DISCREPANCY`.
 * **Recount Delegation Workflow:** Audit managers delegate specific discrepant items to operators for blind recounts, or apply authorized correction overrides with full audit logging.
 * **Active Directory SSO:** Corporate LDAP authentication for large warehouse user management.
@@ -439,7 +447,7 @@ graph TB
 
     subgraph Reconciliation_Gateway["Backend API & Caching"]
         ExpressGateway["Express.js API Gateway"]
-        RedisCache["ioredis High-Concurrency Cache"]
+        RedisCache["ioredis High-Concurrency Cache Store"]
         LDAP["Active Directory Corporate SSO"]
     end
 
@@ -447,18 +455,20 @@ graph TB
         PrismaORM["Prisma ORM Query Engine"]
         DiscrepancyCalc["Physical vs Ledger Discrepancy Engine"]
         DelegationWorkflow["Blind Recount Delegation Manager"]
+        OpnameCron["Automated Stock Opname Cron Scheduler"]
         Postgres[(PostgreSQL Master DB)]
     end
 
     BarcodeScanner -->|Scan Item Barcode & Rack ID| ScanBuffer
     ScanBuffer --> ExpressGateway
     ExpressGateway -->|Auth Staff| LDAP
-    ExpressGateway <-->|Cache Hot Inventory| RedisCache
+    ExpressGateway <-->|Cache Hot Inventory & Racks| RedisCache
     ExpressGateway --> DiscrepancyCalc
     DiscrepancyCalc -->|Compare Physical Qty vs ERP Ledger| PrismaORM
     PrismaORM --> Postgres
     DiscrepancyCalc -->|Discrepancy Detected| DelegationWorkflow
     DelegationWorkflow -->|Trigger Re-Scan Request| BarcodeScanner
+    OpnameCron -->|Periodic Audit Snapshot| Postgres
 ```
 
 ---
