@@ -21,9 +21,10 @@ I am a Software Engineer at PT Catur Sukses Internasional with a proven track re
 | Focus Area | Technologies |
 | :--- | :--- |
 | **Backend & APIs** | NestJS, Express.js, Node.js, FastAPI, RESTful APIs, WebSockets, SOAP/NTLM |
-| **Databases & Caching** | PostgreSQL, MongoDB, Redis, Prisma ORM, Mongoose, Pgvector |
+| **Databases & Caching** | PostgreSQL, MongoDB, Redis, SQLite/LibSQL, Prisma ORM, Mongoose, Pgvector |
 | **Frontend & Mobile** | React, Next.js, React Native, Expo, React Flow, Tailwind CSS, Zustand |
 | **Infrastructure & DevOps** | Docker, Linux VPS, Nginx, CI/CD (GitHub Actions), LDAP/Active Directory |
+| **AI & Automation** | OpenRouter, OpenAI APIs, LangChain, Spaced Repetition Algorithms, Telegram Bot Webhooks |
 | **Integrations** | MS Dynamics NAV (ERP), Midtrans Payment Gateway, Cloudflare R2, Telegram Bot API, WhatsApp Web API |
 
 ---
@@ -255,32 +256,34 @@ graph TD
 
 ---
 
-### 6. 💰 Petty Cash Manager
+### 6. 🧠 Spaced Retention Bot & Cognitive AI Engine
 
-> Multi-warehouse petty cash journal with monthly budgeting and receipt archival  
-> 📊 **Scale & Impact:** Controls branch expense allocation and receipt auditing across 15+ warehouse sites.
+> AI-powered cognitive manager, spaced repetition scheduler, and knowledge conflict guard  
+> 📊 **Scale & Impact:** Automates personal strategy retention, parses unstructured research notes with AI, and enforces decision consistency via automated Telegram dispatchers.
 
-![NestJS](https://img.shields.io/badge/Backend-NestJS%2010-E0234E?style=flat-square&logo=nestjs)
 ![Next.js](https://img.shields.io/badge/Frontend-Next.js%2015-000000?style=flat-square&logo=nextdotjs)
-![Prisma](https://img.shields.io/badge/ORM-Prisma-2D3748?style=flat-square&logo=prisma)
-![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql)
-![Cloudflare R2](https://img.shields.io/badge/Storage-Cloudflare%20R2-F38020?style=flat-square&logo=cloudflare)
+![OpenRouter](https://img.shields.io/badge/AI-OpenRouter%20LLM-6366F1?style=flat-square&logo=openai)
+![Telegram](https://img.shields.io/badge/Bot-Telegram%20Webhook-26A5E4?style=flat-square&logo=telegram)
+![SQLite](https://img.shields.io/badge/Database-SQLite%20%2F%20LibSQL-003B57?style=flat-square&logo=sqlite)
+![Vercel Cron](https://img.shields.io/badge/Scheduler-Vercel%20Cron-000000?style=flat-square&logo=vercel)
 
-A secure enterprise expense tracking platform for branch-level petty cash auditing, digital receipt storage, and monthly budget enforcement with Active Directory integration.
+An intelligent knowledge management engine built to control cognitive capacity, eliminate decision fatigue, and enforce long-term memory retention using spaced repetition algorithms combined with LLM-powered note parsing.
 
 **Key capabilities:**
-* **Branch-Level Cash Isolation:** Scopes transactions strictly to specific warehouses — cashiers only access their designated branch journals.
-* **Budget Cap Enforcement:** Admin-defined monthly spending limits per expense category, preventing unapproved overspending with real-time budget burn visualization (Recharts).
-* **Digital Receipt Archival:** Expense attachments upload directly to Cloudflare R2 object storage, creating an immutable audit trail.
-* **Role-Based Access Control:** `CASHIER` → branch transactions, `SUPERVISOR` → review & monitoring, `ADMIN` → global config, budgets, and AD user mapping.
-* **Active Directory SSO:** LDAP-based corporate authentication with automatic role mapping.
+* **AI Note Slicing & Auto-Categorization:** Automatically processes raw research notes or strategic logs, structuring them into core principles and mapping them to domain threads using OpenRouter LLMs.
+* **AI Conflict Guard:** Prevents duplicate or contradictory strategic rules by performing side-by-side AI evaluation against historical database entries before persisting.
+* **Spaced Repetition Engine (SuperMemo / Ebbinghaus Curve):** Computes optimal review intervals and dispatches automated reminder sessions via Telegram Webhook APIs.
+* **Interactive Telegram Bot Interface:** Full remote control via `/focus` (RAM slot management), `/load` (10-second contextual cheatsheets), `/review` (inline mastery checks), and `/tanya` (AI business strategy consult).
+* **Vercel Cron Integration:** Automated daily trigger pipeline executing spaced review dispatches with authorization header validation.
 
 ```mermaid
 graph TD
-    Client[Next.js 15 Client] <-->|REST APIs| Server[NestJS Gateway]
-    Server <-->|Prisma ORM| DB[(PostgreSQL)]
-    Server -->|S3 SDK| R2[Cloudflare R2 Storage]
-    Server -->|LDAP| AD[Active Directory]
+    User[Web Dashboard / Telegram Bot] -->|Raw Research / Commands| Gateway[Next.js App Router API]
+    Gateway <-->|Structured JSON| OpenRouter[OpenRouter LLM Engine]
+    Gateway -->|Conflict Check| ConflictGuard[AI Contradiction Evaluator]
+    ConflictGuard -->|Persist Principles| DB[(SQLite / LibSQL Database)]
+    Cron[Vercel Daily Cron Job] -->|Trigger Interval Session| SpacedEngine[Spaced Repetition Algorithm]
+    SpacedEngine -->|Webhook Dispatch| Telegram[Telegram Bot API]
 ```
 
 ---
