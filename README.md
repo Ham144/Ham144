@@ -59,7 +59,7 @@ Replaces hardcoded business approval paths with a visual graph editor. Enterpris
 </p>
 
 <p align="center">
-  <img src="assets/screenshots/approval-app.jpeg" width="48%" alt="Approva.ai Application" />
+  <img src="assets/screenshots/history.png" width="48%" alt="Approva.ai Application" />
   <img src="assets/screenshots/approval-motto.png" width="48%" alt="Approva.ai Branding" />
 </p>
 
