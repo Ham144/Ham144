@@ -1,7 +1,7 @@
 # Hi, I'm Muhammad Yafizham 👋
-### AI & Full-Stack Software Engineer | Enterprise Systems & LLM Workflows
+### Full-Stack Software Engineer | High-Concurrency Systems & Enterprise Backend
 
-I am a Software Engineer at PT Catur Sukses Internasional with a proven track record of single-handedly architecting, deploying, and operating **14+ enterprise production systems** across logistics, AI agent workflows, sales routing, and backend automation. Fluent in English, I specialize in building production AI/LLM pipelines, high-concurrency backend services, real-time logistics engines, and enterprise ERP integrations.
+I am a Software Engineer at PT Catur Sukses Internasional specializing in high-concurrency backend architecture, real-time logistics engines, and enterprise ERP integrations. I have architected and deployed mission-critical operational platforms — including a DAG-based Approval Workflow Engine, a Redis-clustered Warehouse Queue System, and an Offline-First Mobile POS — handling distributed synchronization, concurrent transaction locking, and multi-tenant enterprise workflows at production scale. Fluent in English.
 
 [📄 Download My Resume (PDF)](https://github.com/Ham144/Ham144/raw/main/Resume_Muhammad_Yafizham_Batubara.pdf) | [💼 LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/)
 
@@ -21,18 +21,16 @@ I am a Software Engineer at PT Catur Sukses Internasional with a proven track re
 | Focus Area | Technologies |
 | :--- | :--- |
 | **AI & LLM Workflows** | OpenRouter, Gemini 2.5 Flash, OpenAI APIs, Custom Prompt Orchestration, Structured JSON Outputs, Spaced Repetition Algorithms, Telegram Bot Webhooks |
-| **Backend & APIs** | NestJS, Express.js, Node.js, FastAPI, RESTful APIs, WebSockets (RedisIoAdapter), SOAP/NTLM |
-| **Databases & Caching** | PostgreSQL, MongoDB, Redis (ioredis), SQLite/LibSQL, Prisma ORM, Mongoose, Pgvector |
+| **Backend & APIs** | NestJS, Express.js, Node.js, RESTful APIs, WebSockets (RedisIoAdapter), SOAP/NTLM |
+| **Databases & Caching** | PostgreSQL, MongoDB, Redis (ioredis), SQLite/LibSQL, Prisma ORM, Mongoose |
 | **Frontend & Mobile** | React 18, Next.js 15, React Native 0.76, Expo 52, React Flow, Tailwind CSS v4, Zustand |
 | **Infrastructure & DevOps** | Docker, Linux VPS, Nginx, CI/CD (GitHub Actions), LDAP/Active Directory |
 | **Integrations** | MS Dynamics NAV (ERP), Midtrans Payment Gateway, Cloudflare R2 / Turnstile, Telegram Bot API, WhatsApp Web API |
 
 ---
 
-> 🔒 **Proprietary Commercial IP & Source Code Notice:**
-> The source code for the flagship platforms featured below represents proprietary commercial IP owned and architected by Muhammad Yafizham (Founder & Principal Systems Architect). All source repositories are strictly **Private** to protect custom engines, business logic, and commercial licensing rights.
-> 
-> Full architectural specifications, system design diagrams, UI screenshot galleries, and **Live Production Web Applications** are available below for evaluation. Private code audits or temporary read-only repository access can be arranged for technical hiring evaluations under mutual non-disclosure agreements (NDA).
+> 📂 **Source Code & Live Demos:**
+> Selected production repositories are publicly available on GitHub. Full architectural specifications, system design diagrams, UI screenshot galleries, and **Live Production Web Applications** are available below for evaluation.
 
 ---
 
@@ -182,9 +180,11 @@ graph TB
 
 > Real-time loading dock booking, RedisIoAdapter WebSocket cluster, and Gantt board carrier scheduler  
 > 🔗 **Live Web Application:** [orbit.pethalvoid.com](https://orbit.pethalvoid.com)  
+> 📂 **Source Code:** [github.com/Ham144/warehouse-queue-management-system](https://github.com/Ham144/warehouse-queue-management-system)  
 > 📊 **Scale & Impact:** Serves 12+ enterprise warehouse facilities, managing ~2,500+ monthly dock bookings with zero booking collisions.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-orbit.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://orbit.pethalvoid.com)
+[![Source Code](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Ham144/warehouse-queue-management-system)
 ![NestJS](https://img.shields.io/badge/Backend-NestJS-E0234E?style=flat-square&logo=nestjs)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql)
 ![Redis](https://img.shields.io/badge/Cache-Redis%20(RedisIoAdapter)-DC382D?style=flat-square&logo=redis)
@@ -338,9 +338,11 @@ graph TB
 
 > Offline-first mobile Point of Sale with multi-tier promo engine, thermal printing, and payment gateway  
 > 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  
+> 📂 **Source Code:** [github.com/Ham144/super-pos-mobile](https://github.com/Ham144/super-pos-mobile)  
 > 📊 **Scale & Impact:** Deployed across 40+ retail outlets & sales reps, processing ~15,000+ monthly transactions with zero transaction loss.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-pos.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://pos.pethalvoid.com)
+[![Source Code](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Ham144/super-pos-mobile)
 ![React Native](https://img.shields.io/badge/Mobile-React%20Native%200.76-61DAFB?style=flat-square&logo=react)
 ![Expo](https://img.shields.io/badge/Framework-Expo%2052-000020?style=flat-square&logo=expo)
 ![Express](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)
