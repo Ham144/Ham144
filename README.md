@@ -3,7 +3,7 @@
 
 I am a Software Engineer at PT Catur Sukses Internasional specializing in high-concurrency backend architecture, real-time logistics engines, and enterprise ERP integrations. I have architected and deployed mission-critical operational platforms — including a DAG-based Approval Workflow Engine, a Redis-clustered Warehouse Queue System, and an Offline-First Mobile POS — handling distributed synchronization, concurrent transaction locking, and multi-tenant enterprise workflows at production scale. Fluent in English.
 
-[📄 Download My Resume (PDF)](https://github.com/Ham144/Ham144/raw/main/Resume_Muhammad_Yafizham_Batubara.pdf) | [💼 LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/)
+ [💼 LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/)
 
 ---
 
