@@ -117,66 +117,7 @@ graph TB
 
 ---
 
-### 2. 🧠 Spaced Retention Bot & Cognitive AI Engine
-
-> AI-powered cognitive manager, LLM note slicer, spaced repetition scheduler, and knowledge conflict guard  
-> 🔗 **Live Web Application:** [retention.pethalvoid.com](https://retention.pethalvoid.com)  
-> 📊 **Scale & Impact:** Automates personal strategy retention, parses unstructured research notes with AI, and enforces decision consistency via automated Telegram dispatchers.
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-retention.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://retention.pethalvoid.com)
-![Next.js](https://img.shields.io/badge/Frontend-Next.js%2015-000000?style=flat-square&logo=nextdotjs)
-![OpenRouter](https://img.shields.io/badge/AI-OpenRouter%20(Gemini%202.5%20Flash)-6366F1?style=flat-square&logo=openai)
-![Telegram](https://img.shields.io/badge/Bot-Telegram%20Webhook-26A5E4?style=flat-square&logo=telegram)
-![SQLite](https://img.shields.io/badge/Database-LibSQL%20%2F%20SQLite-003B57?style=flat-square&logo=sqlite)
-![Vercel Cron](https://img.shields.io/badge/Scheduler-Vercel%20Cron-000000?style=flat-square&logo=vercel)
-
-An intelligent knowledge management engine built to control cognitive capacity, eliminate decision fatigue, and enforce long-term memory retention using spaced repetition algorithms combined with LLM-powered note parsing.
-
-**Key capabilities:**
-* **LLM Note Slicing & Auto-Categorization:** Uses structured JSON mode (`response_format: { type: "json_object" }`) via OpenRouter (`google/gemini-2.5-flash`) to parse raw text dumps into core principles and auto-map them to domain threads (`pethalvoid`, `nutra`, `career-search`).
-* **AI Conflict Guard:** Evaluates new rules against historical database entries in real-time. Duplicates are auto-bypassed, while contradictions trigger a side-by-side resolution panel. Low confidence scores held for manual review.
-* **Spaced Repetition Engine (SuperMemo / Ebbinghaus Curve):** Computes memory decay intervals and dispatches automated reminder sessions via Telegram Webhook APIs.
-* **Interactive Telegram Bot & Strategy Advisor:** Remote control via `/focus` (RAM slot management), `/load` (10-second contextual cheatsheets), `/review` (inline mastery checks), and `/tanya` (AI business strategy consultant filtering internet queries through custom principles).
-* **Vercel Cron Integration:** Automated daily trigger pipeline executing spaced review dispatches with authorization header validation.
-
-```mermaid
-graph TB
-    subgraph Ingress_Layer["Multi-Channel Ingress"]
-        Dashboard["Next.js 15 App Router Dashboard"]
-        TG_Hook["Telegram Bot Webhook Endpoint"]
-    end
-
-    subgraph AI_Intelligence["AI Agent & Conflict Engine"]
-        Slicer["LLM Note Slicer (OpenRouter / Gemini 2.5)"]
-        Guard["Side-by-Side Conflict & Duplicate Evaluator"]
-        Consult["AI Contextual Strategy Advisor"]
-    end
-
-    subgraph Memory_Engine["Retention Core & Storage"]
-        Spaced["SuperMemo / Ebbinghaus Spaced Repetition Engine"]
-        DB[(LibSQL / SQLite Database)]
-    end
-
-    subgraph Automation["Background Dispatcher"]
-        Cron["Vercel Daily Cron Worker"]
-        Dispatch["Telegram Interactive Session Dispatcher"]
-    end
-
-    Dashboard -->|Raw Text Dump| Slicer
-    TG_Hook -->|Commands / Log| Slicer
-    Slicer --> Guard
-    Guard -->|Validation Passed| DB
-    Guard -->|Contradiction Detected| Dashboard
-    Dashboard -->|Query AI| Consult
-    Cron -->|Daily Trigger| Spaced
-    Spaced -->|Due Principles| DB
-    Spaced -->|Build Reminders| Dispatch
-    Dispatch -->|Interactive Keyboards| TG_Hook
-```
-
----
-
-### 3. 🗓️ Warehouse Queue Management System (WQMS)
+### 2. 🗓️ Warehouse Queue Management System (WQMS)
 
 > Real-time loading dock booking, RedisIoAdapter WebSocket cluster, and Gantt board carrier scheduler  
 > 🔗 **Live Web Application:** [orbit.pethalvoid.com](https://orbit.pethalvoid.com)  
@@ -265,13 +206,365 @@ graph TB
 
 ---
 
-### 4. 🗺️ Field Sales CRM (S-BIT)
+### 3. 📱 Super POS Mobile
+
+> Offline-first mobile Point of Sale with dual outlet modes, multi-tier promo engine, thermal printing, and payment gateway  
+> 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  
+> 📂 **Source Code:** [github.com/Ham144/super-pos-mobile](https://github.com/Ham144/super-pos-mobile)  
+> 📊 **Scale & Impact:** Deployed across 40+ retail outlets & sales reps, processing ~15,000+ monthly transactions with zero transaction loss.
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-pos.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://pos.pethalvoid.com)
+[![Source Code](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Ham144/super-pos-mobile)
+[![React Native](https://img.shields.io/badge/Mobile-React%20Native%200.76-61DAFB?style=flat-square&logo=react)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Framework-Expo%2052-000020?style=flat-square&logo=expo)](https://expo.dev/)
+[![Express](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=flat-square&logo=mongodb)](https://www.mongodb.com/)
+[![Midtrans](https://img.shields.io/badge/Payment-Midtrans%20(Indonesian%20Stripe)-002D62?style=flat-square)](https://midtrans.com/)
+
+A high-performance, offline-first mobile Point of Sale application designed for sales representatives and retail outlet clerks, featuring local WiFi thermal printing, cashless payment gateway integration, and deep Microsoft Dynamics NAV ERP connectivity.
+
+<p align="center">
+  <img src="assets/screenshots/home.png" width="90%" alt="Super POS Mobile Dashboard" />
+</p>
+
+---
+
+## 💼 Business Value & Real-World Impact
+
+For mobile sales forces, field agents, or retail popups, internet connection drops shouldn't halt business. **Super POS Mobile** addresses this challenge by:
+* **Offline-First Transactions**: Cashiers check out customers offline; transactions queue locally and sync automatically with the main office once a connection returns.
+* **Direct Mobile Printing**: Sales reps print official invoices on-the-go to network/WiFi thermal printers directly from their phone.
+* **Cashless Payments**: Accelerates checkouts using integrated Midtrans payment APIs (Indonesian Stripe) to process local electronic payments (QRIS, bank transfers, credit cards).
+* **Flexible Promo Engine**: Evaluates active discount structures, item combos, and vouchers directly on the device.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+```mermaid
+graph TD
+    Client[Expo 52 Mobile Client] <-->|REST / Sync APIs| Server[Express API Server]
+    Client -->|TCP Socket| Printer[WiFi Thermal POS Printer]
+    Server <-->|Mongoose| DB[(MongoDB Database)]
+    Server -->|REST APIs| Midtrans[Midtrans Payment Gateway]
+    Server <-->|SOAP / NTLM| NAV[(Microsoft Dynamics NAV ERP)]
+    Web[Web Admin Dashboard] <-->|REST APIs| Server
+    Server <-->|LDAP| AD[(Active Directory)]
+    Server -->|Fonnte API| WA[WhatsApp Gateway]
+```
+
+Super POS ships **three clients that talk to one Express backend**:
+- **Mobile** — the field-facing POS, tuned for offline resilience and NAV-backed stock.
+- **Web Admin** — catalog, promo/voucher configuration, sales reports, RBAC, and system settings.
+- **Backend** — API gateway, sync engine, SOAP↔NAV bridge, payment orchestration, LDAP auth, and receipt/WhatsApp delivery.
+
+### Mobile Client (Expo)
+* **React Native (0.76) & Expo (52)**: Multi-platform mobile app development.
+* **Expo Router (V4)**: Typed file-based routing.
+* **NativeWind (V4)**: High-performance React Native styling based on Tailwind utility classes.
+* **TCP Socket (`react-native-tcp-socket`)**: Direct network communication with thermal POS printers.
+* **AsyncStorage & NetInfo**: Local offline database cache and connectivity listeners.
+
+### Backend Server
+* **Express.js (Node.js)**: API Gateway handling sync engines, promo evaluations, and transaction pipelines.
+* **Mongoose (MongoDB)**: Document database for catalogs, outlet allocations, vouchers, and transactions.
+* **ESC/POS & Node Thermal Printer**: Server-side layout builders for receipt generation.
+* **Midtrans Client**: Payment settlement integration (Indonesian Stripe).
+
+---
+
+## 🚀 Key Architectural Features
+
+### 1. Dual Outlet Modes: `offline` vs `stateless`
+
+Every outlet is provisioned with an explicit `mode`, and the mobile app switches its entire data-flow strategy based on that flag. This lets one binary serve two very different retail realities:
+
+| Aspect | `offline` mode | `stateless` mode |
+|---|---|---|
+| Intended use case | Event booths, pop-ups, unstable network locations | Permanent outlets integrated with the ERP warehouse |
+| Source of truth for stock | Local `AsyncStorage` dump, reconciled on sync | **Microsoft Dynamics NAV** via SOAP (live) |
+| Catalog fetch | Bulk paginated dump into `AsyncStorage` | Live partial fetch + infinite scroll per screen |
+| Can sell without internet | **Yes** — transactions queue locally | **No** — cetak bill / bayar require connectivity |
+| Sync engine | `syncronizeOfflineMode` → `/api/v1/sinkronisasi/sync-offline-mode` | Not used — every action hits NAV in real time |
+| Bill endpoints | Local storage + sync mobile route | `/api/v1/stateless/{cetak-bill,edit-lines,bayar,void}` |
+| Post-payment stock deduction | Local `updateInventoryAndStats` | Already reflected via NAV `WsPostInvoiceSO` |
+| Discount below web price | Applied locally | Requires **pending approval** flow before shipment |
+| Void flow | Local flag + sync | SOAP `GetSalesShipmentLines` → `WsUndoShipment` |
+
+#### Offline mode — battle-tested sync pipeline
+
+```mermaid
+sequenceDiagram
+    participant K as Kasir (Mobile)
+    participant AS as AsyncStorage
+    participant API as Express API
+    participant DB as MongoDB
+
+    Note over K,AS: 1. Cold start / manual "Sync" tap
+    K->>API: syncronizeOfflineMode()
+    API->>DB: fetch inventories, diskon, promo, voucher, SPG
+    API-->>K: paginated batches
+    K->>AS: dump into local cache
+
+    Note over K,AS: 2. Selling — fully offline capable
+    K->>AS: create bill, apply promo/diskon locally
+    K->>K: print thermal receipt (TCP)
+    K->>AS: mark bill paid + decrement local qty
+
+    Note over K,API: 3. Reconciliation (auto or manual)
+    K->>API: POST /sinkronisasi/sync-offline-mode (queued bills)
+    API->>DB: persist invoices, adjust inventory, stack-trace SKU
+    API-->>K: confirm + refresh cache
+```
+
+#### Stateless mode — always-online NAV integration
+
+```mermaid
+sequenceDiagram
+    participant K as Kasir (Mobile)
+    participant API as Express API
+    participant NAV as Dynamics NAV (SOAP)
+    participant DB as MongoDB
+
+    Note over K,API: Catalog & stock are live per screen
+    K->>API: GET /inventories/getAllinventoriesMobile (partial)
+    API->>NAV: GetInventoryByLocationMultiple
+    NAV-->>API: qty per location
+    API-->>K: enriched inventory page
+
+    Note over K,NAV: Print bill = ship in NAV
+    K->>API: POST /stateless/cetak-bill
+    API->>NAV: SalesOrderAutoPostingShip
+    NAV-->>API: shipment doc
+    API->>DB: persist bill (shipped)
+    API-->>K: OK → print customer receipt
+
+    Note over K,NAV: Edit / remove line after bill
+    K->>API: POST /stateless/edit-lines
+    API->>NAV: GetSalesShipmentLines → WsUndoShipment
+    API-->>K: re-print required
+
+    Note over K,NAV: Pay
+    K->>API: POST /stateless/bayar
+    API->>NAV: WsPostInvoiceSO
+    API->>DB: mark done, save nomorTransaksi
+    K->>K: print kwitansi
+
+    Note over K,NAV: Void (next day, etc.)
+    K->>API: POST /stateless/void
+    API->>NAV: GetSalesShipmentLines → WsUndoShipment (all)
+```
+
+#### One codebase, two personas
+
+```mermaid
+flowchart LR
+    subgraph Mobile["Mobile Client"]
+        BH[BillHeader / Sync UI]
+        LS[LibrariesScreen]
+        BO[useBillOperations]
+    end
+
+    BH -- outlet.mode == offline --> SYNC[syncronizeOfflineMode]
+    BH -- outlet.mode == stateless --> LIVE[Skip sync UI]
+
+    LS -- offline --> DUMP[AsyncStorage inventories]
+    LS -- stateless --> FETCH[GET /inventories/getAllinventoriesMobile]
+
+    BO -- offline --> LOCAL[Local bill + queue]
+    BO -- stateless --> ST[/api/v1/stateless/*/]
+
+    SYNC --> API1[POST /sinkronisasi/sync-offline-mode]
+    ST --> SOAP[SOAP → NAV ERP]
+```
+
+The switch is driven by a single field on the outlet document — head office can migrate a booth from `offline` to `stateless` once permanent NAV connectivity is available, **no app reinstall required**.
+
+### 2. Offline-to-Online Sync Pipeline (`syncMobile`) — offline mode only
+
+When network connectivity returns on an outlet running in `offline` mode:
+1. Mobile client tracks local sales registers and stock deductions in offline storage.
+2. Once online, client initiates a sync process calling `POST /api/v1/sinkronisasi/sync-offline-mode`.
+3. Backend resolves conflict checks, records transactions, and updates warehouse inventory balances.
+
+Auto-sync respects an interval configured in `AsyncStorage.sinkronisasiInterval`, and is **skipped entirely for stateless outlets** since their state already lives on the server.
+
+<p align="center">
+  <img src="assets/screenshots/settlement-android-tab.png" width="90%" alt="Tablet POS Settlement Page" />
+</p>
+
+### 3. Network Thermal Printing
+Generates ESC/POS command buffers and streams them over TCP sockets (WiFi/Ethernet) directly to configured printer IP addresses — no drivers or spoolers needed.
+
+### 4. Dynamic API Configuration
+Since field agents work across different local subnets, the app features an administrative settings modal where users can type, test, and save custom backend URL endpoints, stored securely via `AsyncStorage` and `react-native-keychain`.
+
+### 5. Midtrans Payment Integration
+Generates dynamic QRIS codes and payment links in-app, listening to webhook settlements to close open invoice bills automatically.
+
+### 6. Enterprise Auth & Messaging (Web Admin)
+* **LDAP / Active Directory** — accepts both local app accounts and AD users. First LDAP login auto-provisions a `Kasir` (or `Super Admin` for `description == "IT"`).
+* **Fonnte WhatsApp Gateway** — pending receipts can be delivered directly to the customer's WhatsApp.
+* **Configurable AD / SMTP / WhatsApp** — all three integrations are editable at runtime from the Application Setting menu; no redeploy needed to rotate credentials.
+
+<p align="center">
+  <img src="assets/screenshots/invoices-page.webp" width="48%" alt="Invoices List Page" />
+  <img src="assets/screenshots/settlement-android-tab.png" width="48%" alt="Pending Invoice Bill Details" />
+</p>
+
+---
+
+## 📸 Admin Dashboard & Operations Showcase
+
+### 1. Promotional Rules & Vouchers
+<p align="center">
+  <img src="assets/screenshots/promo-page.webp" width="48%" alt="Promo Config" />
+</p>
+
+### 2. Purchase Orders (PO) Flow
+<p align="center">
+  <img src="assets/screenshots/purchase-order-create.webp" width="90%" alt="Create Purchase Order" />
+</p>
+
+### 3. Master Data & Analytics
+<p align="center">
+  <img src="assets/screenshots/sales-report.webp" width="48%" alt="Sales Performance Report" />
+  <img src="assets/screenshots/library-page.png" width="48%" alt="Product Library Catalog" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/customer-database.webp" width="48%" alt="Customer Registry" />
+  <img src="assets/screenshots/accounts-management.webp" width="48%" alt="Accounts & Users Management" />
+</p>
+
+### 4. Technical Stack Trace Reports
+<p align="center">
+  <img src="assets/screenshots/stack-trace.webp" width="90%" alt="Mobile Crash Logging & Stack Tracing" />
+</p>
+
+---
+
+### 4. 🧠 Spaced Retention Bot & Cognitive AI Engine
+
+> AI-powered cognitive manager, LLM note slicer, spaced repetition scheduler, and knowledge conflict guard  
+> 📂 **Source Code:** [github.com/Ham144/principle-retention-bot](https://github.com/Ham144/principle-retention-bot)  
+> 📊 **Scale & Impact:** Automates personal strategy retention, parses unstructured research notes with AI, and enforces decision consistency via automated Telegram dispatchers.
+
+[![Source Code](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Ham144/principle-retention-bot)
+![Next.js](https://img.shields.io/badge/Frontend-Next.js%2015-000000?style=flat-square&logo=nextdotjs)
+![OpenRouter](https://img.shields.io/badge/AI-OpenRouter%20(Gemini%202.5%20Flash)-6366F1?style=flat-square&logo=openai)
+![Telegram](https://img.shields.io/badge/Bot-Telegram%20Webhook-26A5E4?style=flat-square&logo=telegram)
+![SQLite](https://img.shields.io/badge/Database-LibSQL%20%2F%20SQLite-003B57?style=flat-square&logo=sqlite)
+![Vercel Cron](https://img.shields.io/badge/Scheduler-Vercel%20Cron-000000?style=flat-square&logo=vercel)
+
+An intelligent knowledge management engine built to control cognitive capacity, eliminate decision fatigue, and enforce long-term memory retention using spaced repetition algorithms combined with LLM-powered note parsing.
+
+**Key capabilities:**
+* **LLM Note Slicing & Auto-Categorization:** Uses structured JSON mode (`response_format: { type: "json_object" }`) via OpenRouter (`google/gemini-2.5-flash`) to parse raw text dumps into core principles and auto-map them to domain threads (`pethalvoid`, `nutra`, `career-search`).
+* **AI Conflict Guard:** Evaluates new rules against historical database entries in real-time. Duplicates are auto-bypassed, while contradictions trigger a side-by-side resolution panel. Low confidence scores held for manual review.
+* **Spaced Repetition Engine (SuperMemo / Ebbinghaus Curve):** Computes memory decay intervals and dispatches automated reminder sessions via Telegram Webhook APIs.
+* **Interactive Telegram Bot & Strategy Advisor:** Remote control via `/focus` (RAM slot management), `/load` (10-second contextual cheatsheets), `/review` (inline mastery checks), and `/tanya` (AI business strategy consultant filtering internet queries through custom principles).
+* **Vercel Cron Integration:** Automated daily trigger pipeline executing spaced review dispatches with authorization header validation.
+
+```mermaid
+graph TB
+    subgraph Ingress_Layer["Multi-Channel Ingress"]
+        Dashboard["Next.js 15 App Router Dashboard"]
+        TG_Hook["Telegram Bot Webhook Endpoint"]
+    end
+
+    subgraph AI_Intelligence["AI Agent & Conflict Engine"]
+        Slicer["LLM Note Slicer (OpenRouter / Gemini 2.5)"]
+        Guard["Side-by-Side Conflict & Duplicate Evaluator"]
+        Consult["AI Contextual Strategy Advisor"]
+    end
+
+    subgraph Memory_Engine["Retention Core & Storage"]
+        Spaced["SuperMemo / Ebbinghaus Spaced Repetition Engine"]
+        DB[(LibSQL / SQLite Database)]
+    end
+
+    subgraph Automation["Background Dispatcher"]
+        Cron["Vercel Daily Cron Worker"]
+        Dispatch["Telegram Interactive Session Dispatcher"]
+    end
+
+    Dashboard -->|Raw Text Dump| Slicer
+    TG_Hook -->|Commands / Log| Slicer
+    Slicer --> Guard
+    Guard -->|Validation Passed| DB
+    Guard -->|Contradiction Detected| Dashboard
+    Dashboard -->|Query AI| Consult
+    Cron -->|Daily Trigger| Spaced
+    Spaced -->|Due Principles| DB
+    Spaced -->|Build Reminders| Dispatch
+    Dispatch -->|Interactive Keyboards| TG_Hook
+```
+
+---
+
+### 5. 📦 Inventory Audit System
+
+> Physical stock auditing, high-concurrency ioredis caching, barcode scanning, and recount delegation dashboard  
+> 📂 **Source Code:** [github.com/Ham144/inventory-audit-system](https://github.com/Ham144/inventory-audit-system)  
+> 📊 **Scale & Impact:** Reconciles physical warehouse inventory across 100,000+ total SKU line items annually with automated discrepancy flagging.
+
+[![Source Code](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Ham144/inventory-audit-system)
+![React Router v7](https://img.shields.io/badge/Framework-React%20Router%20v7-CA4245?style=flat-square&logo=reactrouter)
+![Tailwind CSS v4](https://img.shields.io/badge/Styling-Tailwind%20v4-06B6D4?style=flat-square&logo=tailwindcss)
+![Express](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql)
+![Redis](https://img.shields.io/badge/Cache-Redis%20(ioredis)-DC382D?style=flat-square&logo=redis)
+
+A high-concurrency inventory reconciliation platform that automates physical count tracking, computes stock discrepancies against ERP ledgers, and manages recount delegation workflows.
+
+**Key capabilities:**
+* **High-Concurrency ioredis Caching:** Custom `ioredis` service caching hot SKU catalog filters, rack mappings (`office-mapping.ts`), and scan approval logs for instant barcode verification.
+* **Digital Scan Logging:** Warehouse operators scan barcodes and register physical counts mapped to specific shelves, racks, and warehouse branches in real-time.
+* **Discrepancy Reconciliation Engine:** Automatically sums physical logs per SKU/rack and compares against ERP system values — flagging items as `MATCHED` or `DISCREPANCY`.
+* **Recount Delegation Workflow:** Audit managers delegate specific discrepant items to operators for blind recounts, or apply authorized correction overrides with full audit logging.
+* **Active Directory SSO:** Corporate LDAP authentication for large warehouse user management.
+
+```mermaid
+graph TB
+    subgraph Warehouse_Floor["Warehouse Floor Operations"]
+        BarcodeScanner["Barcode Scanner & Mobile Web App"]
+        ScanBuffer["Real-time Rack Scan Buffer"]
+    end
+
+    subgraph Reconciliation_Gateway["Backend API & Caching"]
+        ExpressGateway["Express.js API Gateway"]
+        RedisCache["ioredis High-Concurrency Cache Store"]
+        LDAP["Active Directory Corporate SSO"]
+    end
+
+    subgraph Discrepancy_Engine["Reconciliation & Delegation Core"]
+        PrismaORM["Prisma ORM Query Engine"]
+        DiscrepancyCalc["Physical vs Ledger Discrepancy Engine"]
+        DelegationWorkflow["Blind Recount Delegation Manager"]
+        OpnameCron["Automated Stock Opname Cron Scheduler"]
+        Postgres[(PostgreSQL Master DB)]
+    end
+
+    BarcodeScanner -->|Scan Item Barcode & Rack ID| ScanBuffer
+    ScanBuffer --> ExpressGateway
+    ExpressGateway -->|Auth Staff| LDAP
+    ExpressGateway <-->|Cache Hot Inventory & Racks| RedisCache
+    ExpressGateway --> DiscrepancyCalc
+    DiscrepancyCalc -->|Compare Physical Qty vs ERP Ledger| PrismaORM
+    PrismaORM --> Postgres
+    DiscrepancyCalc -->|Discrepancy Detected| DelegationWorkflow
+    DelegationWorkflow -->|Trigger Re-Scan Request| BarcodeScanner
+    OpnameCron -->|Periodic Audit Snapshot| Postgres
+```
+
+---
+
+### 6. 🗺️ Field Sales CRM (S-BIT)
 
 > Location-verified sales routing and client order-taking CRM with dual-backend ERP microservices  
-> 🔗 **Live Web Application:** [sfa.pethalvoid.com](https://sfa.pethalvoid.com)  
 > 📊 **Scale & Impact:** Tracks 50+ active field sales reps, auditing ~3,000+ geofenced client visits monthly with direct MS Dynamics NAV ERP synchronization.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-sfa.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sfa.pethalvoid.com)
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB?style=flat-square&logo=react)
 ![Express.js](https://img.shields.io/badge/Primary%20Backend-Express.js-000000?style=flat-square&logo=express)
 ![SO Microservice](https://img.shields.io/badge/SO%20Microservice-MIDCSI%20Backend-FF6C37?style=flat-square&logo=node.js)
@@ -330,147 +623,6 @@ graph TB
     SO_Gateway <-->|NTLM v2 Encrypted SOAP XML| DynamicsERP
     CronSync <-->|Hourly Sync: Customers & Credit Limits| DynamicsERP
     CronSync -->|Update Local Master Data| MongoDB
-```
-
----
-
-### 5. 📱 Super POS Mobile
-
-> Offline-first mobile Point of Sale with multi-tier promo engine, thermal printing, and payment gateway  
-> 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  
-> 📂 **Source Code:** [github.com/Ham144/super-pos-mobile](https://github.com/Ham144/super-pos-mobile)  
-> 📊 **Scale & Impact:** Deployed across 40+ retail outlets & sales reps, processing ~15,000+ monthly transactions with zero transaction loss.
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-pos.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://pos.pethalvoid.com)
-[![Source Code](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Ham144/super-pos-mobile)
-![React Native](https://img.shields.io/badge/Mobile-React%20Native%200.76-61DAFB?style=flat-square&logo=react)
-![Expo](https://img.shields.io/badge/Framework-Expo%2052-000020?style=flat-square&logo=expo)
-![Express](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)
-![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=flat-square&logo=mongodb)
-![Midtrans](https://img.shields.io/badge/Payment-Midtrans-002D62?style=flat-square)
-
-A high-performance mobile POS application for sales representatives and retail outlet clerks, featuring offline transaction queueing, direct WiFi thermal printing, and cashless payment integration.
-
-<p align="center">
-  <img src="assets/screenshots/home.png" width="90%" alt="Super POS Mobile Dashboard" />
-</p>
-
-| Tablet Settlement | Invoice Management |
-| :---: | :---: |
-| <img src="assets/screenshots/settlement-android-tab.png" width="100%" alt="Settlement Page" /> | <img src="assets/screenshots/invoices-page.webp" width="100%" alt="Invoices List" /> |
-
-| Version 1.0 2024 | Product Library |
-| :---: | :---: |
-| <img src="assets/screenshots/pos-old-version-ui.png" width="100%" alt="Version 1.0 2024" /> | <img src="assets/screenshots/library-page.png" width="100%" alt="Product Catalog" /> |
-
-| Promotions & Vouchers | Sales Analytics |
-| :---: | :---: |
-| <img src="assets/screenshots/promo-page.webp" width="100%" alt="Promo Config" /> | <img src="assets/screenshots/sales-report.webp" width="100%" alt="Sales Report" /> |
-
-| Purchase Orders | Accounts Management |
-| :---: | :---: |
-| <img src="assets/screenshots/purchase-order-create.webp" width="100%" alt="PO Creation" /> | <img src="assets/screenshots/accounts-management.webp" width="100%" alt="Accounts" /> |
-
-| Customer Database | Crash Stack Traces |
-| :---: | :---: |
-| <img src="assets/screenshots/customer-database.webp" width="100%" alt="Customer Registry" /> | <img src="assets/screenshots/stack-trace.webp" width="100%" alt="Stack Tracing" /> |
-
-**Key capabilities:**
-* **Multi-Layer Voucher & Promo Engine:** Middleware evaluation stack (`checkDiskon`, `checkPromo`, `checkVoucher`, `generateVoucherCheck`) validating multi-tier vouchers, item bundle discounts, and outlet-specific rules.
-* **Offline-First Sync Engine:** Transactions complete fully offline in `AsyncStorage`, then auto-reconcile with the central MongoDB server once connectivity returns.
-* **Direct ESC/POS Thermal Printing:** Generates raw ESC/POS command buffers and streams them over TCP sockets to network/WiFi thermal printers — no drivers or spoolers needed.
-* **Midtrans Payment Gateway:** Generates dynamic QRIS codes and payment links in-app with automated webhook settlement listeners.
-* **Automated Invoice & Voucher Crons:** Background cron services (`emailKwitansi.js`, `pengirimanVoucherCode.js`) dispatching automated PDF receipts and digital voucher dispatches to customers.
-
-```mermaid
-graph TB
-    subgraph Mobile_Device["Mobile Client (Expo 52 + React Native 0.76)"]
-        MobileUI["POS Mobile Interface"]
-        OfflineQueue["AsyncStorage Offline Transaction Queue"]
-        PrinterDriver["Raw ESC/POS Buffer & Direct TCP Socket Streamer"]
-        VoucherEngine["On-Device Voucher & Ledger Lock Service"]
-    end
-
-    subgraph Local_Hardware["Retail Hardware Layer"]
-        ThermalPrinter["WiFi / Network Thermal Receipt Printer"]
-    end
-
-    subgraph Backend_Cloud["Central Cloud Services & Promo Engine"]
-        ExpressServer["Express.js API Gateway"]
-        PromoStack["Promo, Diskon & Voucher Middleware Stack"]
-        SyncService["Auto Reconciler & Conflict Resolver"]
-        MongoDB[(MongoDB Master Database)]
-        Midtrans["Midtrans QRIS Payment Gateway"]
-        CronServices["Automated Kwitansi & Voucher Cron Jobs"]
-    end
-
-    MobileUI -->|Cashier Checkout| OfflineQueue
-    MobileUI -->|Generate ESC/POS Bytes| PrinterDriver
-    PrinterDriver -->|TCP Socket Raw Buffer| ThermalPrinter
-    OfflineQueue -->|Connection Restored| SyncService
-    SyncService --> ExpressServer
-    ExpressServer --> PromoStack
-    PromoStack --> MongoDB
-    ExpressServer <-->|QRIS Webhooks| Midtrans
-    CronServices -->|Send PDF Receipt & Vouchers| Customer[Customer Email / Phone]
-    MobileUI <-->|Online Voucher Check| VoucherEngine
-```
-
----
-
-### 6. 📦 Inventory Audit System
-
-> Physical stock auditing, high-concurrency ioredis caching, barcode scanning, and recount delegation dashboard  
-> 🔗 **Live Web Application:** [inventory.pethalvoid.com](https://inventory.pethalvoid.com)  
-> 📊 **Scale & Impact:** Reconciles physical warehouse inventory across 100,000+ total SKU line items annually with automated discrepancy flagging.
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-inventory.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://inventory.pethalvoid.com)
-![React Router v7](https://img.shields.io/badge/Framework-React%20Router%20v7-CA4245?style=flat-square&logo=reactrouter)
-![Tailwind CSS v4](https://img.shields.io/badge/Styling-Tailwind%20v4-06B6D4?style=flat-square&logo=tailwindcss)
-![Express](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)
-![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql)
-![Redis](https://img.shields.io/badge/Cache-Redis%20(ioredis)-DC382D?style=flat-square&logo=redis)
-
-A high-concurrency inventory reconciliation platform that automates physical count tracking, computes stock discrepancies against ERP ledgers, and manages recount delegation workflows.
-
-**Key capabilities:**
-* **High-Concurrency ioredis Caching:** Custom `ioredis` service caching hot SKU catalog filters, rack mappings (`office-mapping.ts`), and scan approval logs for instant barcode verification.
-* **Digital Scan Logging:** Warehouse operators scan barcodes and register physical counts mapped to specific shelves, racks, and warehouse branches in real-time.
-* **Discrepancy Reconciliation Engine:** Automatically sums physical logs per SKU/rack and compares against ERP system values — flagging items as `MATCHED` or `DISCREPANCY`.
-* **Recount Delegation Workflow:** Audit managers delegate specific discrepant items to operators for blind recounts, or apply authorized correction overrides with full audit logging.
-* **Active Directory SSO:** Corporate LDAP authentication for large warehouse user management.
-
-```mermaid
-graph TB
-    subgraph Warehouse_Floor["Warehouse Floor Operations"]
-        BarcodeScanner["Barcode Scanner & Mobile Web App"]
-        ScanBuffer["Real-time Rack Scan Buffer"]
-    end
-
-    subgraph Reconciliation_Gateway["Backend API & Caching"]
-        ExpressGateway["Express.js API Gateway"]
-        RedisCache["ioredis High-Concurrency Cache Store"]
-        LDAP["Active Directory Corporate SSO"]
-    end
-
-    subgraph Discrepancy_Engine["Reconciliation & Delegation Core"]
-        PrismaORM["Prisma ORM Query Engine"]
-        DiscrepancyCalc["Physical vs Ledger Discrepancy Engine"]
-        DelegationWorkflow["Blind Recount Delegation Manager"]
-        OpnameCron["Automated Stock Opname Cron Scheduler"]
-        Postgres[(PostgreSQL Master DB)]
-    end
-
-    BarcodeScanner -->|Scan Item Barcode & Rack ID| ScanBuffer
-    ScanBuffer --> ExpressGateway
-    ExpressGateway -->|Auth Staff| LDAP
-    ExpressGateway <-->|Cache Hot Inventory & Racks| RedisCache
-    ExpressGateway --> DiscrepancyCalc
-    DiscrepancyCalc -->|Compare Physical Qty vs ERP Ledger| PrismaORM
-    PrismaORM --> Postgres
-    DiscrepancyCalc -->|Discrepancy Detected| DelegationWorkflow
-    DelegationWorkflow -->|Trigger Re-Scan Request| BarcodeScanner
-    OpnameCron -->|Periodic Audit Snapshot| Postgres
 ```
 
 ---
