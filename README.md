@@ -359,9 +359,9 @@ A high-performance mobile POS application for sales representatives and retail o
 | :---: | :---: |
 | <img src="assets/screenshots/settlement-android-tab.png" width="100%" alt="Settlement Page" /> | <img src="assets/screenshots/invoices-page.webp" width="100%" alt="Invoices List" /> |
 
-| Pending Invoice | Product Library |
+| Version 1.0 2024 | Product Library |
 | :---: | :---: |
-| <img src="assets/screenshots/pending-invoice.webp" width="100%" alt="Pending Bill" /> | <img src="assets/screenshots/library-page.png" width="100%" alt="Product Catalog" /> |
+| <img src="assets/screenshots/pos-old-version-ui.png" width="100%" alt="Version 1.0 2024" /> | <img src="assets/screenshots/library-page.png" width="100%" alt="Product Catalog" /> |
 
 | Promotions & Vouchers | Sales Analytics |
 | :---: | :---: |
