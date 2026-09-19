@@ -120,7 +120,7 @@ graph TB
 ### 2. 🗓️ Warehouse Queue Management System (WQMS)
 
 > Real-time loading dock booking, RedisIoAdapter WebSocket cluster, and Gantt board carrier scheduler  
-> 🔗 **Live Web Application:** [orbit.pethalvoid.com](https://orbit.pethalvoid.com)  
+> 🔗 **Live Web Application:** [orbit.pethalvoid.com](https://orbit.pethalvoid.com)  (old version 1.0)
 > 📂 **Source Code:** [github.com/Ham144/warehouse-queue-management-system](https://github.com/Ham144/warehouse-queue-management-system)  
 > 📊 **Scale & Impact:** Serves 12+ enterprise warehouse facilities, managing ~2,500+ monthly dock bookings with zero booking collisions.
 
@@ -209,7 +209,7 @@ graph TB
 ### 3. 📱 Super POS Mobile
 
 > Offline-first mobile Point of Sale with dual outlet modes, multi-tier promo engine, thermal printing, and payment gateway  
-> 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  
+> 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  (old version 1.0)
 > 📂 **Source Code:** [github.com/Ham144/super-pos-mobile](https://github.com/Ham144/super-pos-mobile)  
 > 📊 **Scale & Impact:** Deployed across 40+ retail outlets & sales reps, processing ~15,000+ monthly transactions with zero transaction loss.
 
