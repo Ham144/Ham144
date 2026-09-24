@@ -564,6 +564,7 @@ graph TB
 
 > Location-verified sales routing and client order-taking CRM with dual-backend ERP microservices  
 > 📊 **Scale & Impact:** Tracks 50+ active field sales reps, auditing ~3,000+ geofenced client visits monthly with direct MS Dynamics NAV ERP synchronization.
+> 📂 **Source Code:** [https://github.com/Ham144/field-sales-crm-sbit](https://github.com/Ham144/field-sales-crm-sbit) 
 
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB?style=flat-square&logo=react)
 ![Express.js](https://img.shields.io/badge/Primary%20Backend-Express.js-000000?style=flat-square&logo=express)
