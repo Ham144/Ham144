@@ -1,7 +1,7 @@
 # Hi, I'm Muhammad Yafizham 👋
-### Full-Stack Software Engineer | High-Concurrency Systems & Enterprise Backend
+### AI Engineer | Applied AI, Agentic Systems & Production Backend
 
-I am a Software Engineer at PT Catur Sukses Internasional specializing in high-concurrency backend architecture, real-time logistics engines, and enterprise ERP integrations. I have architected and deployed mission-critical operational platforms — including a DAG-based Approval Workflow Engine, a Redis-clustered Warehouse Queue System, and an Offline-First Mobile POS — handling distributed synchronization, concurrent transaction locking, and multi-tenant enterprise workflows at production scale. Fluent in English.
+I build production AI systems — LangGraph-based agents, RAG pipelines, and LLM-powered automation running in real business workflows today. Underneath that, I'm a backend engineer who has solo-architected and deployed 14+ mission-critical enterprise platforms — including a DAG-based Approval Workflow Engine, a Redis-clustered Warehouse Queue System, and an Offline-First Mobile POS — handling distributed synchronization, concurrent transaction locking, and multi-tenant workflows at production scale. I own both the AI layer and the infrastructure it runs on. Fluent in English.
 
  [💼 LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/)
 
@@ -20,7 +20,7 @@ I am a Software Engineer at PT Catur Sukses Internasional specializing in high-c
 
 | Focus Area | Technologies |
 | :--- | :--- |
-| **AI & LLM Workflows** | OpenRouter, Gemini 2.5 Flash, OpenAI APIs, Custom Prompt Orchestration, Structured JSON Outputs, Spaced Repetition Algorithms, Telegram Bot Webhooks |
+| **AI & LLM Engineering** | LangGraph (agentic workflows), RAG Pipelines, OpenAI APIs, OpenRouter, Gemini, n8n AI Agents, Prompt Orchestration, Structured JSON Outputs, Vector Search, WhatsApp/Telegram Bot Integrations |
 | **Backend & APIs** | NestJS, Express.js, Node.js, RESTful APIs, WebSockets (RedisIoAdapter), SOAP/NTLM |
 | **Databases & Caching** | PostgreSQL, MongoDB, Redis (ioredis), SQLite/LibSQL, Prisma ORM, Mongoose |
 | **Frontend & Mobile** | React 18, Next.js 15, React Native 0.76, Expo 52, React Flow, Tailwind CSS v4, Zustand |
@@ -35,6 +35,27 @@ I am a Software Engineer at PT Catur Sukses Internasional specializing in high-c
 ---
 
 ## Featured Production Projects
+
+---
+
+### 0. 🤖 Production AI Agents & Automation (Mutilator AI)
+
+> LangGraph agents, RAG pipelines, and n8n-powered AI workflows running in live business operations
+
+> 🔗 **Live:** [mutilator.pethalvoid.com](https://mutilator.pethalvoid.com)
+
+> 📊 **Scale & Impact:** AI agents handling real customer conversations and content production in production today.
+
+![LangGraph](https://img.shields.io/badge/AI-LangGraph-00C853?style=flat-square), ![RAG](https://img.shields.io/badge/AI-RAG%20Pipelines-7B1FA2?style=flat-square), ![n8n](https://img.shields.io/badge/Automation-n8n-EA4B71?style=flat-square), ![OpenAI](https://img.shields.io/badge/LLM-OpenAI%20APIs-412991?style=flat-square), ![WhatsApp](https://img.shields.io/badge/Channel-WhatsApp%20API-25D366?style=flat-square)
+
+Unlike demo-grade AI projects, these agents run inside real business workflows — qualifying leads, resolving customer inquiries, and producing platform-ready content daily. The stack pairs LLM reasoning (LangGraph agents, RAG over business knowledge) with battle-tested backend infrastructure (Node.js, PostgreSQL, Redis, Docker on Linux VPS).
+
+**Key capabilities:**
+
+* **Agentic Customer Service:** WhatsApp AI agent that triages inquiries, answers from business knowledge bases, and escalates to humans with full context.
+* **AI Content Pipeline:** Automated research → draft → review → publish flow producing platform-formatted content for multiple channels.
+* **RAG over Business Data:** Retrieval pipelines grounding every agent response in the client's actual documents and data — no hallucinations in customer-facing replies.
+* **Full n8n Orchestration:** Visual, maintainable workflow automation connecting LLMs, databases, and messaging channels without fragile glue code.
 
 ---
 
