@@ -38,28 +38,76 @@ I build production AI systems — LangGraph-based agents, RAG pipelines, and LLM
 
 ---
 
-### 0. 🤖 Production AI Agents & Automation (Mutilator AI)
+### 0. 💬 Aca — AI Customer Service Agent (WhatsApp)
 
-> LangGraph agents, RAG pipelines, and n8n-powered AI workflows running in live business operations
+> Autonomous WhatsApp support agent that answers from your business knowledge and never sleeps
 
-> 🔗 **Live:** [mutilator.pethalvoid.com](https://mutilator.pethalvoid.com)
+> 🔗 **Live:** [aca.pethalvoid.com](https://aca.pethalvoid.com)
 
-> 📊 **Scale & Impact:** AI agents handling real customer conversations and content production in production today.
+> 📊 **Scale & Impact:** Handling real customer conversations in production today.
 
-![LangGraph](https://img.shields.io/badge/AI-LangGraph-00C853?style=flat-square), ![RAG](https://img.shields.io/badge/AI-RAG%20Pipelines-7B1FA2?style=flat-square), ![n8n](https://img.shields.io/badge/Automation-n8n-EA4B71?style=flat-square), ![OpenAI](https://img.shields.io/badge/LLM-OpenAI%20APIs-412991?style=flat-square), ![WhatsApp](https://img.shields.io/badge/Channel-WhatsApp%20API-25D366?style=flat-square)
+![n8n](https://img.shields.io/badge/Automation-n8n-EA4B71?style=flat-square)
+![WhatsApp](https://img.shields.io/badge/Channel-WhatsApp%20API-25D366?style=flat-square)
+![LLM](https://img.shields.io/badge/LLM-OpenAI%20APIs-412991?style=flat-square)
+![RAG](https://img.shields.io/badge/AI-RAG%20Pipelines-7B1FA2?style=flat-square)
 
-Unlike demo-grade AI projects, these agents run inside real business workflows — qualifying leads, resolving customer inquiries, and producing platform-ready content daily. The stack pairs LLM reasoning (LangGraph agents, RAG over business knowledge) with battle-tested backend infrastructure (Node.js, PostgreSQL, Redis, Docker on Linux VPS).
+Unlike demo-grade chatbots, Aca runs inside a real business messaging workflow — triaging inquiries, answering from the business's own knowledge base, and escalating to a human with full conversation context. No dashboard babysitting: one business number, the agent runs the whole shift.
 
 **Key capabilities:**
 
-* **Agentic Customer Service:** WhatsApp AI agent that triages inquiries, answers from business knowledge bases, and escalates to humans with full context.
-* **AI Content Pipeline:** Automated research → draft → review → publish flow producing platform-formatted content for multiple channels.
-* **RAG over Business Data:** Retrieval pipelines grounding every agent response in the client's actual documents and data — no hallucinations in customer-facing replies.
-* **Full n8n Orchestration:** Visual, maintainable workflow automation connecting LLMs, databases, and messaging channels without fragile glue code.
+* **Always-on triage:** replies in seconds, 24/7 — qualifies inquiries and answers FAQs grounded in business documents, never hallucinating customer-facing replies.
+* **Human handoff with context:** escalates tricky cases to the owner with the full conversation attached.
+* **Managed service:** the buyer owns their WhatsApp business number; everything else (infra, models, workflows) is handled.
 
 ---
 
-### 1. 🔄 Approval Workflow Engine (Approva.ai)
+### 1. 🎨 Rachel — AI Content Creator
+
+> Autonomous content agent: researches, writes, designs and renders one platform-ready content package every weekday morning
+
+> 🔗 **Live:** [rachel.pethalvoid.com](https://rachel.pethalvoid.com)
+
+> 📊 **Scale & Impact:** Producing platform-formatted content daily — singles, carousels and short videos.
+
+![n8n](https://img.shields.io/badge/Automation-n8n-EA4B71?style=flat-square)
+![AWS](https://img.shields.io/badge/Cloud-AWS%20Lambda-FF9900?style=flat-square)
+![Remotion](https://img.shields.io/badge/Video-Remotion-00D8FF?style=flat-square)
+![LLM](https://img.shields.io/badge/LLM-OpenRouter-412991?style=flat-square)
+
+Zero-trigger pipeline: research → copy → visuals → video, delivered for review every weekday at 08:00. Approve once and it publishes to Instagram, Facebook, LinkedIn and YouTube. Shorts are rendered in the cloud with Remotion on AWS Lambda — kinetic typography, no laptop required.
+
+**Key capabilities:**
+
+* **Daily autonomous production:** one content package per workday — copy, carousel/single creatives, and a vertical short video.
+* **Review-then-publish:** everything lands in a review queue first; approved content auto-publishes to all connected platforms.
+* **Cloud rendering:** Remotion compositions rendered on AWS Lambda, output served over CDN.
+
+---
+
+### 2. ♻️ Guna — AI Content Repurposing Agent
+
+> Give it one piece of content, get a month of platform-ready posts back
+
+> 🔗 **Live:** [guna.pethalvoid.com](https://guna.pethalvoid.com)
+
+![n8n](https://img.shields.io/badge/Automation-n8n-EA4B71?style=flat-square)
+![Telegram](https://img.shields.io/badge/Channel-Telegram%20Bot-26A5E4?style=flat-square)
+![LLM](https://img.shields.io/badge/LLM-OpenAI%20APIs-412991?style=flat-square)
+
+Guna recycles existing content instead of creating from zero: paste a post, article or video transcript and it cuts, rewrites and reformats it for each platform — so every asset keeps working instead of being posted once and forgotten.
+
+**Key capabilities:**
+
+* **Input-triggered recycling:** paste existing content → get platform-ready variants back.
+* **Format adaptation:** rewrites tone and structure per channel instead of copy-pasting.
+
+---
+
+> 🧪 **Concepts in progress:** Torjan (autonomous lead-hunting agent) and Napoleon (single-chat team orchestrator) — architectures designed, builds gated behind first customers.
+
+---
+
+### 3. 🔄 Approval Workflow Engine (Approva.ai)
 
 > Dynamic multi-tenant & super-tenant approval system with a visual drag-and-drop workflow designer  
 > 🔗 **Live Web Application:** [approva-ai.hexadim.com](https://approva-ai.hexadim.com)  
@@ -138,7 +186,7 @@ graph TB
 
 ---
 
-### 2. 🗓️ Warehouse Queue Management System (WQMS)
+### 4. 🗓️ Warehouse Queue Management System (WQMS)
 
 > Real-time loading dock booking, RedisIoAdapter WebSocket cluster, and Gantt board carrier scheduler  
 > 🔗 **Live Web Application:** [orbit.pethalvoid.com](https://orbit.pethalvoid.com)  (old version 1.0)
@@ -227,7 +275,7 @@ graph TB
 
 ---
 
-### 3. 📱 Super POS Mobile
+### 5. 📱 Super POS Mobile
 
 > Offline-first mobile Point of Sale with dual outlet modes, multi-tier promo engine, thermal printing, and payment gateway  
 > 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  (old version 1.0)
@@ -465,7 +513,7 @@ Generates dynamic QRIS codes and payment links in-app, listening to webhook sett
 
 ---
 
-### 4. 🧠 Spaced Retention Bot & Cognitive AI Engine
+### 6. 🧠 Spaced Retention Bot & Cognitive AI Engine
 
 > AI-powered cognitive manager, LLM note slicer, spaced repetition scheduler, and knowledge conflict guard  
 > 📂 **Source Code:** [github.com/Ham144/principle-retention-bot](https://github.com/Ham144/principle-retention-bot)  
@@ -524,7 +572,7 @@ graph TB
 
 ---
 
-### 5. 📦 Inventory Audit System
+### 7. 📦 Inventory Audit System
 
 > Physical stock auditing, high-concurrency ioredis caching, barcode scanning, and recount delegation dashboard  
 > 📂 **Source Code:** [github.com/Ham144/inventory-audit-system](https://github.com/Ham144/inventory-audit-system)  
@@ -581,7 +629,7 @@ graph TB
 
 ---
 
-### 6. 🗺️ Field Sales CRM (S-BIT)
+### 8. 🗺️ Field Sales CRM (S-BIT)
 
 > Location-verified sales routing and client order-taking CRM with dual-backend ERP microservices  
 > 📊 **Scale & Impact:** Tracks 50+ active field sales reps, auditing ~3,000+ geofenced client visits monthly with direct MS Dynamics NAV ERP synchronization.
