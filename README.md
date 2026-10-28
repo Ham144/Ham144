@@ -2,7 +2,7 @@
 
 **Backend Engineer · Applied AI Engineer · Enterprise Systems**
 
-Jakarta, Indonesia · Open to remote roles and relocation
+Jakarta, Indonesia · Open to worldwide remote roles and on-site relocation with visa sponsorship
 
 I build software that teams use to run daily operations. At **PT Catur Sukses Internasional**, I have built and maintained **15+ production applications** across logistics, sales, finance, and internal workflows. These systems support multiple tenants and use custom role-based access control (RBAC) shaped around each business workflow. My core stack is **TypeScript, Node.js, NestJS, PostgreSQL, and Redis**. I also work on AI agents, LLM orchestration, and enterprise integrations.
 
