@@ -4,7 +4,7 @@
 
 Jakarta, Indonesia · Open to remote roles and relocation
 
-I build software that teams use to run daily operations. At **PT Catur Sukses Internasional**, I have built and maintained **15+ production applications** across logistics, sales, finance, and internal workflows. My core stack is **TypeScript, Node.js, NestJS, PostgreSQL, and Redis**. I also work on AI agents, LLM orchestration, and enterprise integrations.
+I build software that teams use to run daily operations. At **PT Catur Sukses Internasional**, I have built and maintained **15+ production applications** across logistics, sales, finance, and internal workflows. These systems support multiple tenants and use custom role-based access control (RBAC) shaped around each business workflow. My core stack is **TypeScript, Node.js, NestJS, PostgreSQL, and Redis**. I also work on AI agents, LLM orchestration, and enterprise integrations.
 
 **[Email me](mailto:yafizham@pethalvoid.com) · [LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/) · [Explore my repositories](https://github.com/Ham144?tab=repositories)**
 
@@ -230,7 +230,7 @@ flowchart LR
 
 ## How I work
 
-I take projects from requirements and architecture through implementation, deployment, and support. I am most interested in remote backend and applied-AI roles where reliability and measurable business outcomes matter.
+I started most of these projects by designing and coding their foundations myself, from the data model and permission rules to APIs, integrations, deployment, and support. I now use AI tools to speed up implementation, while I remain responsible for architecture, code review, testing, and production behavior. I am most interested in remote backend and applied-AI roles where reliability and measurable business outcomes matter.
 
 **Languages:** Indonesian (native), English (IELTS General Training 7.0)
 
