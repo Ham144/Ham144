@@ -1,143 +1,40 @@
-# Hi, I'm Yafizham 👋
-### AI Engineer | Applied AI, Agentic Systems & Production Backend
+# Yafizham Batubara
 
-I build production AI systems — LangGraph-based agents, RAG pipelines, and LLM-powered automation running in real business workflows today. Underneath that, I'm a backend engineer who has solo-architected and deployed 14+ mission-critical enterprise platforms — including a DAG-based Approval Workflow Engine, a Redis-clustered Warehouse Queue System, and an Offline-First Mobile POS — handling distributed synchronization, concurrent transaction locking, and multi-tenant workflows at production scale. I own both the AI layer and the infrastructure it runs on. Fluent in English.
+**Backend Engineer · Applied AI Engineer · Enterprise Systems**
 
- [💼 LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/)
+Jakarta, Indonesia · Open to remote roles and relocation
 
----
+I build software that teams use to run daily operations. At **PT Catur Sukses Internasional**, I have built and maintained **15+ production applications** across logistics, sales, finance, and internal workflows. My core stack is **TypeScript, Node.js, NestJS, PostgreSQL, and Redis**. I also work on AI agents, LLM orchestration, and enterprise integrations.
 
-### 📈 GitHub Stats
+**[Email me](mailto:yafizham@pethalvoid.com) · [LinkedIn](https://www.linkedin.com/in/muhammad-yafizham-batubara/) · [Explore my repositories](https://github.com/Ham144?tab=repositories)**
 
-<p align="left">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=Ham144&show_icons=true&theme=tokyonight&count_private=true" alt="Ham144's GitHub Stats" height="180px" />
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Ham144&layout=compact&theme=tokyonight&langs_count=6" alt="Ham144's Top Languages" height="180px" />
-</p>
+## Current focus: AI agent for Microsoft Dynamics NAV
 
----
+I am building an enterprise chatbot that connects authenticated, persistent conversations to internal workflows and **Microsoft Dynamics NAV** through **SOAP/NTLM**. Its goal-oriented agent uses conversation context to support e-commerce customers, warehouse administrators, and telemarketing staff. The backend keeps ERP credentials and privileged operations server-side.
 
-### 🛠️ Core Technology Stack
+**In development:** a permission-aware **Retrieval-Augmented Generation (RAG)** pipeline over ERP data, using PostgreSQL for structured retrieval data and Redis as a planned retrieval/vector cache. It is intended to answer inventory and approval questions with current, authorized data. I do not present this pipeline as deployed or measured yet.
 
-| Focus Area | Technologies |
-| :--- | :--- |
-| **AI & LLM Engineering** | LangGraph (agentic workflows), RAG Pipelines, OpenAI APIs, OpenRouter, Gemini, n8n AI Agents, Prompt Orchestration, Structured JSON Outputs, Vector Search, WhatsApp/Telegram Bot Integrations |
-| **Backend & APIs** | NestJS, Express.js, Node.js, RESTful APIs, WebSockets (RedisIoAdapter), SOAP/NTLM |
-| **Databases & Caching** | PostgreSQL, MongoDB, Redis (ioredis), SQLite/LibSQL, Prisma ORM, Mongoose |
-| **Frontend & Mobile** | React 18, Next.js 15, React Native 0.76, Expo 52, React Flow, Tailwind CSS v4, Zustand |
-| **Infrastructure & DevOps** | Docker, Linux VPS, Nginx, CI/CD (GitHub Actions), LDAP/Active Directory |
-| **Integrations** | MS Dynamics NAV (ERP), Midtrans Payment Gateway, Cloudflare R2 / Turnstile, Telegram Bot API, WhatsApp Web API |
+## Selected production work
 
----
+| Project | What I built | Scale and outcome |
+| --- | --- | --- |
+| [Warehouse Queue Management System](https://github.com/Ham144/warehouse-queue-management-system) | Booking and queue management for warehouse operations | **12+ facilities**, **~2,500 bookings/month**, with no reported booking collisions |
+| [Super POS Mobile](https://github.com/Ham144/super-pos-mobile) | Mobile point-of-sale workflows for outlets and field teams | **40+ outlets and field reps**, **~15,000 transactions/month**, with no reported transaction loss |
+| [Approva](https://approva-ai.hexadim.com/) | Multi-level approval workflows for cross-department operations | **800+ workflows/month** across **5+ departments** |
+| [Inventory Audit System](https://github.com/Ham144/inventory-audit-system) | Inventory counting and audit workflows | **100,000+ SKU line items/year** |
+| [Field Sales CRM (S-BIT)](https://github.com/Ham144/field-sales-crm-sbit) | Geofenced visit and reporting workflows for field sales | **50+ sales reps**, **~3,000 client visits/month** |
 
-> 📂 **Source Code & Live Demos:**
-> Selected production repositories are publicly available on GitHub. Full architectural specifications, system design diagrams, UI screenshot galleries, and **Live Production Web Applications** are available below for evaluation.
+These figures describe the systems in use at my current employer; the linked repositories provide implementation details where public source is available.
 
----
+## AI and automation projects
 
-## Featured Production Projects
+- **[Aca](https://aca.pethalvoid.com/)** — WhatsApp customer-service assistant built around workflow automation and knowledge retrieval.
+- **[Rachel](https://rachel.pethalvoid.com/)** — AI-assisted content production and distribution system. I work on its orchestration, infrastructure, and video rendering pipeline.
 
----
+## System design
 
-### 0. 💬 Aca — AI Customer Service Agent (WhatsApp)
-
-> Autonomous WhatsApp support agent that answers from your business knowledge and never sleeps
-
-> 🔗 **Live:** [aca.pethalvoid.com](https://aca.pethalvoid.com)
-
-> 📊 **Scale & Impact:** Handling real customer conversations in production today.
-
-![n8n](https://img.shields.io/badge/Automation-n8n-EA4B71?style=flat-square)
-![WhatsApp](https://img.shields.io/badge/Channel-WhatsApp%20API-25D366?style=flat-square)
-![LLM](https://img.shields.io/badge/LLM-OpenAI%20APIs-412991?style=flat-square)
-![RAG](https://img.shields.io/badge/AI-RAG%20Pipelines-7B1FA2?style=flat-square)
-
-Unlike demo-grade chatbots, Aca runs inside a real business messaging workflow — triaging inquiries, answering from the business's own knowledge base, and escalating to a human with full conversation context. No dashboard babysitting: one business number, the agent runs the whole shift.
-
-**Key capabilities:**
-
-* **Always-on triage:** replies in seconds, 24/7 — qualifies inquiries and answers FAQs grounded in business documents, never hallucinating customer-facing replies.
-* **Human handoff with context:** escalates tricky cases to the owner with the full conversation attached.
-* **Managed service:** the buyer owns their WhatsApp business number; everything else (infra, models, workflows) is handled.
-
----
-
-### 1. 🎨 Rachel — AI Content Creator
-
-> Autonomous content agent: researches, writes, designs and renders one platform-ready content package every weekday morning
-
-> 🔗 **Live:** [rachel.pethalvoid.com](https://rachel.pethalvoid.com)
-
-> 📊 **Scale & Impact:** Producing platform-formatted content daily — singles, carousels and short videos.
-
-![n8n](https://img.shields.io/badge/Automation-n8n-EA4B71?style=flat-square)
-![AWS](https://img.shields.io/badge/Cloud-AWS%20Lambda-FF9900?style=flat-square)
-![Remotion](https://img.shields.io/badge/Video-Remotion-00D8FF?style=flat-square)
-![LLM](https://img.shields.io/badge/LLM-OpenRouter-412991?style=flat-square)
-
-Zero-trigger pipeline: research → copy → visuals → video, delivered for review every weekday at 08:00. Approve once and it publishes to Instagram, Facebook, LinkedIn and YouTube. Shorts are rendered in the cloud with Remotion on AWS Lambda — kinetic typography, no laptop required.
-
-**Key capabilities:**
-
-* **Daily autonomous production:** one content package per workday — copy, carousel/single creatives, and a vertical short video.
-* **Review-then-publish:** everything lands in a review queue first; approved content auto-publishes to all connected platforms.
-* **Cloud rendering:** Remotion compositions rendered on AWS Lambda, output served over CDN.
-
----
-
-### 2. ♻️ Guna — AI Content Repurposing Agent
-
-> Give it one piece of content, get a month of platform-ready posts back
-
-> 🔗 **Live:** [guna.pethalvoid.com](https://guna.pethalvoid.com)
-
-![n8n](https://img.shields.io/badge/Automation-n8n-EA4B71?style=flat-square)
-![Telegram](https://img.shields.io/badge/Channel-Telegram%20Bot-26A5E4?style=flat-square)
-![LLM](https://img.shields.io/badge/LLM-OpenAI%20APIs-412991?style=flat-square)
-
-Guna recycles existing content instead of creating from zero: paste a post, article or video transcript and it cuts, rewrites and reformats it for each platform — so every asset keeps working instead of being posted once and forgotten.
-
-**Key capabilities:**
-
-* **Input-triggered recycling:** paste existing content → get platform-ready variants back.
-* **Format adaptation:** rewrites tone and structure per channel instead of copy-pasting.
-
----
-
-> 🧪 **Concepts in progress:** Torjan (autonomous lead-hunting agent) and Napoleon (single-chat team orchestrator) — architectures designed, builds gated behind first customers.
-
----
-
-### 3. 🔄 Approval Workflow Engine (Approva.ai)
-
-> Dynamic multi-tenant & super-tenant approval system with a visual drag-and-drop workflow designer  
-> 🔗 **Live Web Application:** [approva-ai.hexadim.com](https://approva-ai.hexadim.com)  
-> 📊 **Scale & Impact:** Adopted across 5+ corporate departments, automating 800+ multi-tier approval workflows monthly.
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-approva--ai.hexadim.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://approva-ai.hexadim.com)
-![React Flow](https://img.shields.io/badge/Frontend-React%20Flow%20V11-FF007A?style=flat-square&logo=react)
-![React](https://img.shields.io/badge/UI-React%2018%20%2B%20Vite-61DAFB?style=flat-square&logo=react)
-![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?style=flat-square&logo=nodedotjs)
-![Redis](https://img.shields.io/badge/Cache-Redis-DC382D?style=flat-square&logo=redis)
-![Active Directory](https://img.shields.io/badge/Auth-LDAP%20%2F%20Active%20Directory-0078D4?style=flat-square&logo=windows)
-![Cloudflare](https://img.shields.io/badge/Security-Cloudflare%20Turnstile-F38020?style=flat-square&logo=cloudflare)
-
-Replaces hardcoded business approval paths with a visual graph editor. Enterprise administrators visually configure conditional routing (e.g., auto-escalating based on department categories, monetary thresholds, or custom logic matrices) with digital canvas signatures, Redis caching, and automated multi-channel alert dispatches.
-
-<p align="center">
-  <img src="assets/screenshots/approval-interactive-workflow.png" width="90%" alt="Interactive Workflow Hub" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/history.png" width="48%" alt="Approva.ai Application" />
-  <img src="assets/screenshots/approval-motto.png" width="48%" alt="Approva.ai Branding" />
-</p>
-
-**Key capabilities:**
-* **Visual Workflow Designer:** Drag-and-drop graph nodes (React Flow V11) to construct multi-tier approval chains, custom form inputs, and dynamic decision logic — no code changes, no redeployment.
-* **Super-Tenant & Cross-Org Flow Duplication:** Multi-tenant architecture with super-admin controls allowing instant replication of complex workflow templates across independent organizational domains.
-* **Redis High-Concurrency Caching Layer:** Custom `RedisService` middleware caching active flow instances, department hierarchies, and rate-limiting high-volume approval submissions.
-* **Digital Signature & ROI PDF Exporter:** Built-in html5 canvas digital signature capture (`SignatureInput`), SHA-256 audit trails, and automated jsPDF financial ROI statement generation (`RoiStatementModal`).
-* **Active Directory SSO & Cloudflare Security:** Integrates local Active Directory (LDAP) for corporate Single Sign-On and Cloudflare Turnstile Captcha to prevent automated bot submissions.
+<details>
+<summary><strong>Approva — approval workflow engine</strong></summary>
 
 ```mermaid
 graph TB
@@ -184,52 +81,10 @@ graph TB
     ROIExporter -->|Export PDF Report| ClientUser[End User Download]
 ```
 
----
+</details>
 
-### 4. 🗓️ Warehouse Queue Management System (WQMS)
-
-> Real-time loading dock booking, RedisIoAdapter WebSocket cluster, and Gantt board carrier scheduler  
-> 🔗 **Live Web Application:** [orbit.pethalvoid.com](https://orbit.pethalvoid.com)  (old version 1.0)
-> 📂 **Source Code:** [github.com/Ham144/warehouse-queue-management-system](https://github.com/Ham144/warehouse-queue-management-system)  
-> 📊 **Scale & Impact:** Serves 12+ enterprise warehouse facilities, managing ~2,500+ monthly dock bookings with zero booking collisions.
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-orbit.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://orbit.pethalvoid.com)
-[![Source Code](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Ham144/warehouse-queue-management-system)
-![NestJS](https://img.shields.io/badge/Backend-NestJS-E0234E?style=flat-square&logo=nestjs)
-![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql)
-![Redis](https://img.shields.io/badge/Cache-Redis%20(RedisIoAdapter)-DC382D?style=flat-square&logo=redis)
-![Next.js](https://img.shields.io/badge/Frontend-Next.js-000000?style=flat-square&logo=nextdotjs)
-![Playwright](https://img.shields.io/badge/Testing-Playwright-2EAD33?style=flat-square&logo=playwright)
-
-A multi-tenant enterprise platform that optimizes warehouse loading/unloading dock schedules, manages carrier queues, and eliminates truck congestion through automated time-slot allocation.
-
-<p align="center">
-  <img src="assets/screenshots/wqms-realtime-drag-drop-area.webp" width="90%" alt="Real-time Drag & Drop Dock Queue Board" />
-</p>
-
-| Busy Time Management | Auto Time Picker |
-| :---: | :---: |
-| <img src="assets/screenshots/wqms-busy-time-management.webp" width="100%" alt="Busy Time Management" /> | <img src="assets/screenshots/wqms-auto-efficient-time-picker-support.webp" width="100%" alt="Auto Efficient Time Picker" /> |
-
-| Multi-Tenancy Support | Multiple Warehouse Rules |
-| :---: | :---: |
-| <img src="assets/screenshots/wqms-multi-tenancy-support.webp" width="100%" alt="Multi-Tenancy Support" /> | <img src="assets/screenshots/wqms-multiple-warehouse-and-multiple-rules.webp" width="100%" alt="Multiple Warehouse Rules" /> |
-
-| Driver & Duration Setup | Booking Approvals & History |
-| :---: | :---: |
-| <img src="assets/screenshots/wqms-driver-template-and-duration-setup.webp" width="100%" alt="Driver Fleet Setup" /> | <img src="assets/screenshots/wqms-booking-approval-and-history-booking.webp" width="100%" alt="Booking History" /> |
-
-| Real-time Messenger | Organization Members |
-| :---: | :---: |
-| <img src="assets/screenshots/wqms-realtime-messanger.webp" width="100%" alt="Driver-Staff Messenger" /> | <img src="assets/screenshots/wqms-all-members-in-1-organization-management.webp" width="100%" alt="Organization Members" /> |
-
-**Key capabilities:**
-* **RedisIoAdapter Cluster WebSockets:** Custom `RedisIoAdapter` service scaling NestJS Socket.io gateways across multi-node server deployments for zero-latency live board updates (`booking.gateway.ts`).
-* **Busy-Time Blackout Manager:** Dynamic slot allocation engine (`busy-time.service`) auto-blocking loading docks for warehouse maintenance, shift changes, or holiday breaks.
-* **Collision-Free Queue Algorithm:** Prevents double-booking using Redis distributed cache locks and automatic open-slot suggestions.
-* **Integrated Driver-Staff Messenger:** Real-time persistent WebSocket chat rooms between drivers and warehouse dispatchers (`chat.gateway.ts`).
-* **Active Directory SSO:** Unique LDAP configuration per tenant organization.
-* **E2E Testing:** Full Playwright test suite for critical booking workflows.
+<details>
+<summary><strong>Warehouse Queue Management System — real-time scheduling</strong></summary>
 
 ```mermaid
 graph TB
@@ -273,42 +128,10 @@ graph TB
     ChatEngine <-->|Real-Time WebSockets| DriverPortal
 ```
 
----
+</details>
 
-### 5. 📱 Super POS Mobile
-
-> Offline-first mobile Point of Sale with dual outlet modes, multi-tier promo engine, thermal printing, and payment gateway  
-> 🔗 **Live Web Application:** [pos.pethalvoid.com](https://pos.pethalvoid.com)  (old version 1.0)
-> 📂 **Source Code:** [github.com/Ham144/super-pos-mobile](https://github.com/Ham144/super-pos-mobile)  
-> 📊 **Scale & Impact:** Deployed across 40+ retail outlets & sales reps, processing ~15,000+ monthly transactions with zero transaction loss.
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-pos.pethalvoid.com-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://pos.pethalvoid.com)
-[![Source Code](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Ham144/super-pos-mobile)
-[![React Native](https://img.shields.io/badge/Mobile-React%20Native%200.76-61DAFB?style=flat-square&logo=react)](https://reactnative.dev/)
-[![Expo](https://img.shields.io/badge/Framework-Expo%2052-000020?style=flat-square&logo=expo)](https://expo.dev/)
-[![Express](https://img.shields.io/badge/Backend-Express.js-000000?style=flat-square&logo=express)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=flat-square&logo=mongodb)](https://www.mongodb.com/)
-[![Midtrans](https://img.shields.io/badge/Payment-Midtrans%20(Indonesian%20Stripe)-002D62?style=flat-square)](https://midtrans.com/)
-
-A high-performance, offline-first mobile Point of Sale application designed for sales representatives and retail outlet clerks, featuring local WiFi thermal printing, cashless payment gateway integration, and deep Microsoft Dynamics NAV ERP connectivity.
-
-<p align="center">
-  <img src="assets/screenshots/home.png" width="90%" alt="Super POS Mobile Dashboard" />
-</p>
-
----
-
-## 💼 Business Value & Real-World Impact
-
-For mobile sales forces, field agents, or retail popups, internet connection drops shouldn't halt business. **Super POS Mobile** addresses this challenge by:
-* **Offline-First Transactions**: Cashiers check out customers offline; transactions queue locally and sync automatically with the main office once a connection returns.
-* **Direct Mobile Printing**: Sales reps print official invoices on-the-go to network/WiFi thermal printers directly from their phone.
-* **Cashless Payments**: Accelerates checkouts using integrated Midtrans payment APIs (Indonesian Stripe) to process local electronic payments (QRIS, bank transfers, credit cards).
-* **Flexible Promo Engine**: Evaluates active discount structures, item combos, and vouchers directly on the device.
-
----
-
-## 🛠️ Tech Stack & Architecture
+<details>
+<summary><strong>Super POS Mobile — ERP integration and offline/online flows</strong></summary>
 
 ```mermaid
 graph TD
@@ -321,46 +144,6 @@ graph TD
     Server <-->|LDAP| AD[(Active Directory)]
     Server -->|Fonnte API| WA[WhatsApp Gateway]
 ```
-
-Super POS ships **three clients that talk to one Express backend**:
-- **Mobile** — the field-facing POS, tuned for offline resilience and NAV-backed stock.
-- **Web Admin** — catalog, promo/voucher configuration, sales reports, RBAC, and system settings.
-- **Backend** — API gateway, sync engine, SOAP↔NAV bridge, payment orchestration, LDAP auth, and receipt/WhatsApp delivery.
-
-### Mobile Client (Expo)
-* **React Native (0.76) & Expo (52)**: Multi-platform mobile app development.
-* **Expo Router (V4)**: Typed file-based routing.
-* **NativeWind (V4)**: High-performance React Native styling based on Tailwind utility classes.
-* **TCP Socket (`react-native-tcp-socket`)**: Direct network communication with thermal POS printers.
-* **AsyncStorage & NetInfo**: Local offline database cache and connectivity listeners.
-
-### Backend Server
-* **Express.js (Node.js)**: API Gateway handling sync engines, promo evaluations, and transaction pipelines.
-* **Mongoose (MongoDB)**: Document database for catalogs, outlet allocations, vouchers, and transactions.
-* **ESC/POS & Node Thermal Printer**: Server-side layout builders for receipt generation.
-* **Midtrans Client**: Payment settlement integration (Indonesian Stripe).
-
----
-
-## 🚀 Key Architectural Features
-
-### 1. Dual Outlet Modes: `offline` vs `stateless`
-
-Every outlet is provisioned with an explicit `mode`, and the mobile app switches its entire data-flow strategy based on that flag. This lets one binary serve two very different retail realities:
-
-| Aspect | `offline` mode | `stateless` mode |
-|---|---|---|
-| Intended use case | Event booths, pop-ups, unstable network locations | Permanent outlets integrated with the ERP warehouse |
-| Source of truth for stock | Local `AsyncStorage` dump, reconciled on sync | **Microsoft Dynamics NAV** via SOAP (live) |
-| Catalog fetch | Bulk paginated dump into `AsyncStorage` | Live partial fetch + infinite scroll per screen |
-| Can sell without internet | **Yes** — transactions queue locally | **No** — cetak bill / bayar require connectivity |
-| Sync engine | `syncronizeOfflineMode` → `/api/v1/sinkronisasi/sync-offline-mode` | Not used — every action hits NAV in real time |
-| Bill endpoints | Local storage + sync mobile route | `/api/v1/stateless/{cetak-bill,edit-lines,bayar,void}` |
-| Post-payment stock deduction | Local `updateInventoryAndStats` | Already reflected via NAV `WsPostInvoiceSO` |
-| Discount below web price | Applied locally | Requires **pending approval** flow before shipment |
-| Void flow | Local flag + sync | SOAP `GetSalesShipmentLines` → `WsUndoShipment` |
-
-#### Offline mode — battle-tested sync pipeline
 
 ```mermaid
 sequenceDiagram
@@ -385,8 +168,6 @@ sequenceDiagram
     API->>DB: persist invoices, adjust inventory, stack-trace SKU
     API-->>K: confirm + refresh cache
 ```
-
-#### Stateless mode — always-online NAV integration
 
 ```mermaid
 sequenceDiagram
@@ -424,8 +205,6 @@ sequenceDiagram
     API->>NAV: GetSalesShipmentLines → WsUndoShipment (all)
 ```
 
-#### One codebase, two personas
-
 ```mermaid
 flowchart LR
     subgraph Mobile["Mobile Client"]
@@ -447,77 +226,13 @@ flowchart LR
     ST --> SOAP[SOAP → NAV ERP]
 ```
 
-The switch is driven by a single field on the outlet document — head office can migrate a booth from `offline` to `stateless` once permanent NAV connectivity is available, **no app reinstall required**.
+</details>
 
-### 2. Offline-to-Online Sync Pipeline (`syncMobile`) — offline mode only
+## How I work
 
-When network connectivity returns on an outlet running in `offline` mode:
-1. Mobile client tracks local sales registers and stock deductions in offline storage.
-2. Once online, client initiates a sync process calling `POST /api/v1/sinkronisasi/sync-offline-mode`.
-3. Backend resolves conflict checks, records transactions, and updates warehouse inventory balances.
+I take projects from requirements and architecture through implementation, deployment, and support. I am most interested in remote backend and applied-AI roles where reliability and measurable business outcomes matter.
 
-Auto-sync respects an interval configured in `AsyncStorage.sinkronisasiInterval`, and is **skipped entirely for stateless outlets** since their state already lives on the server.
+**Languages:** Indonesian (native), English (IELTS General Training 7.0)
 
-<p align="center">
-  <img src="assets/screenshots/settlement-android-tab.png" width="90%" alt="Tablet POS Settlement Page" />
-</p>
-
-### 3. Network Thermal Printing
-Generates ESC/POS command buffers and streams them over TCP sockets (WiFi/Ethernet) directly to configured printer IP addresses — no drivers or spoolers needed.
-
-### 4. Dynamic API Configuration
-Since field agents work across different local subnets, the app features an administrative settings modal where users can type, test, and save custom backend URL endpoints, stored securely via `AsyncStorage` and `react-native-keychain`.
-
-### 5. Midtrans Payment Integration
-Generates dynamic QRIS codes and payment links in-app, listening to webhook settlements to close open invoice bills automatically.
-
-### 6. Enterprise Auth & Messaging (Web Admin)
-* **LDAP / Active Directory** — accepts both local app accounts and AD users. First LDAP login auto-provisions a `Kasir` (or `Super Admin` for `description == "IT"`).
-* **Fonnte WhatsApp Gateway** — pending receipts can be delivered directly to the customer's WhatsApp.
-* **Configurable AD / SMTP / WhatsApp** — all three integrations are editable at runtime from the Application Setting menu; no redeploy needed to rotate credentials.
-
-<p align="center">
-  <img src="assets/screenshots/invoices-page.webp" width="48%" alt="Invoices List Page" />
-  <img src="assets/screenshots/settlement-android-tab.png" width="48%" alt="Pending Invoice Bill Details" />
-</p>
-
----
-
-## 📸 Admin Dashboard & Operations Showcase
-
-### 1. Promotional Rules & Vouchers
-<p align="center">
-  <img src="assets/screenshots/promo-page.webp" width="48%" alt="Promo Config" />
-</p>
-
-### 2. Purchase Orders (PO) Flow
-<p align="center">
-  <img src="assets/screenshots/purchase-order-create.webp" width="90%" alt="Create Purchase Order" />
-</p>
-
-### 3. Master Data & Analytics
-<p align="center">
-  <img src="assets/screenshots/sales-report.webp" width="48%" alt="Sales Performance Report" />
-  <img src="assets/screenshots/library-page.png" width="48%" alt="Product Library Catalog" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/customer-database.webp" width="48%" alt="Customer Registry" />
-  <img src="assets/screenshots/accounts-management.webp" width="48%" alt="Accounts & Users Management" />
-</p>
-
-### 4. Technical Stack Trace Reports
-<p align="center">
-  <img src="assets/screenshots/stack-trace.webp" width="90%" alt="Mobile Crash Logging & Stack Tracing" />
-</p>
-
----
----
-
-### 🤝 Let's Connect
-
-* 💼 **LinkedIn:** [linkedin.com/in/muhammad-yafizham-batubara](https://www.linkedin.com/in/muhammad-yafizham-batubara/)
-* 📧 **Email:** [24434muhammad.yafizham@gmail.com](mailto:24434muhammad.yafizham@gmail.com)
-* 💬 **WhatsApp:** [+62 838-5402-6650](https://wa.me/6283854026650)
-* 📸 **Instagram:** [@yafizhambb](https://www.instagram.com/yafizhambb)
+**Contact:** [yafizham@pethalvoid.com](mailto:yafizham@pethalvoid.com)
 
