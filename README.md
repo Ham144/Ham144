@@ -26,6 +26,12 @@ I am building an enterprise chatbot that connects authenticated, persistent conv
 
 These figures describe the systems in use at my current employer; the linked repositories provide implementation details where public source is available.
 
+### Product screenshots
+
+| Warehouse queue board | Approva workflow interface | Mobile POS checkout |
+| :---: | :---: | :---: |
+| <img src="assets/screenshots/wqms-realtime-drag-drop-area.webp" width="100%" alt="Warehouse Queue Management System real-time dock board" /> | <img src="assets/screenshots/approval-interactive-workflow.png" width="100%" alt="Approva workflow interface preview" /> | <img src="assets/screenshots/android-pos-small.png" width="100%" alt="Super POS Mobile checkout screens" /> |
+
 ## AI and automation projects
 
 - **[Aca](https://aca.pethalvoid.com/)** — WhatsApp customer-service assistant built around workflow automation and knowledge retrieval.
